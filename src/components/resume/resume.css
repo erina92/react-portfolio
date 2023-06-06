@@ -51,3 +51,20 @@
   font-size: var(--h3-font-size);
   margin: 0.5rem 0;
 }
+
+.timeline__institution,
+.timeline__url {
+  color: #8b88b1;
+  font-size: var(--small-font-size);
+}
+
+.timeline__text,
+.timeline__thesis {
+  text-align: justify;
+  word-break: break-all;
+  font-size: 13px;
+}
+
+.timeline__institution {
+  margin-bottom: 0.5rem;
+}

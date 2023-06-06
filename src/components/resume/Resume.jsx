@@ -18,7 +18,10 @@ const Resume = () => {
                   icon={val.icon}
                   title={val.title}
                   year={val.year}
+                  institution={val.institution}
+                  url={val.url}
                   desc={val.desc}
+                  thesis={val.thesis}
                 />
               );
             } else {
@@ -36,6 +39,7 @@ const Resume = () => {
                   icon={val.icon}
                   title={val.title}
                   year={val.year}
+                  institution={val.institution}
                   desc={val.desc}
                 />
               );
