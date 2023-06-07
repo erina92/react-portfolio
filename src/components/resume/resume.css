@@ -1,6 +1,6 @@
 .resume__container {
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.875rem;
+  grid-column-gap: 1.875rem;
 }
 
 .timeline {
@@ -61,7 +61,7 @@
 .timeline__text,
 .timeline__thesis {
   text-align: justify;
-  word-break: break-all;
+  text-justify: distribute;
   font-size: 13px;
 }
 
