@@ -2,6 +2,7 @@ import React from "react";
 import "./about.css";
 import Image from "../../assets/avatar-8.svg";
 import AboutBox from "./AboutBox";
+import CV from "../../cv/CV.pdf";
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
               building interactive applications while bridging the gap between
               languages and technologies.
             </p>
-            <a href="#home" className="btn">
+            <a href={CV} className="btn" target="_blank" rel="noreferrer">
               Download CV
             </a>
           </div>
