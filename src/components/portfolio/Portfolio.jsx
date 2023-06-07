@@ -7,7 +7,7 @@ const Portfolio = () => {
   const [showCertifications, setShowCertifications] = useState(false);
 
   return (
-    <section className="work container section">
+    <section className="work container section" id="portfolio">
       <h2 className="section__title">Recent Projects</h2>
 
       <div className="work__filters">
