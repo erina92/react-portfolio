@@ -16,6 +16,10 @@
   text-align: center;
 }
 
+.home__img {
+  border-radius: 50%;
+}
+
 .home__name {
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
