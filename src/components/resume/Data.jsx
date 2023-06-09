@@ -37,7 +37,7 @@ const Data = [
     institution: "University of Bari Aldo Moro",
     desc: "Acquiring linguistic-theoretical, methodological, and applied skills, as well as knowledge of diverse cultural systems in the countries where the studied languages (English, French, and German) are spoken.",
     thesis:
-      "The Big Bang Theory: Analyzing English-Specific Humor in the Dubbed Version.",
+      "Thesis: The Big Bang Theory: Analyzing English-Specific Humor in the Dubbed Version.",
   },
   {
     id: 5,
@@ -45,7 +45,8 @@ const Data = [
     icon: "icon-briefcase",
     year: "2019 - 2021",
     title: "Consecutive interpreter",
-    desc: "Empowering the Qatari Navy: Specialized interpretation and translation services catered to the courses of 'Electricians,' 'Telecommunications,' and 'Arms and Ammunition' for aspiring sailors, both non-commissioned officers and enlisted personnel, at the esteemed Marine School in Taranto. Our comprehensive language support ensures seamless communication and knowledge transfer, enabling the students to excel in their training and contribute effectively to maritime operations.",
+    institution: "Fincantieri",
+    desc: "Empowering the Qatari Navy: Specialized interpretation and translation services catered to the courses of 'Electricians,' 'Telecommunications,' and 'Arms and Ammunition' for aspiring sailors, both non-commissioned officers and enlisted personnel, at the esteemed Marine School in Taranto. ",
   },
   {
     id: 6,
@@ -53,6 +54,7 @@ const Data = [
     icon: "icon-briefcase",
     year: "2017 - 2020",
     title: "Translator",
+    institution: "SJS Engineering srl",
     desc: "Language Bridge: Facilitating effective communication through comprehensive translation services. Proficient in English to Italian and Italian to English translations of e-mails, work projects, glossaries, and technical manuals. Skilled in managing incoming and outgoing emails and calls with foreign clients, ensuring seamless collaboration and fostering strong business relationships.",
   },
   {
@@ -61,7 +63,8 @@ const Data = [
     icon: "icon-briefcase",
     year: "2009 - 2013",
     title: "Transcriber",
-    desc: "Unlocking the Power of Image-to-Text: Experience seamless image transcription services utilizing cutting-edge online OCR software. Expertise in converting images into text with precision and accuracy. Leveraging advanced technology to extract valuable information and facilitate effortless data processing.",
+    institution: "Alchemy Translations",
+    desc: "Unlocking the Power of Image-to-Text: Experience seamless image transcription services utilizing cutting-edge online OCR software. Expertise in converting images into text with precision and accuracy.",
   },
   {
     id: 8,
@@ -70,7 +73,7 @@ const Data = [
     year: "2019",
     title: "Audiovisual Translator",
     institution: "10D Film",
-    desc: "Offering professional translation services for film subjects from Italian to French. Specialized in accurately translating the intricacies of film-related content, ensuring the essence and context are preserved. Extensive knowledge of the industry and terminologies, combined with linguistic expertise, to deliver high-quality translations that resonate with French-speaking audiences. Committed to meeting deadlines and providing comprehensive linguistic support to enhance the global reach and impact of film projects.",
+    desc: "Offering professional translation services for film subjects from Italian to French. Specialized in accurately translating the intricacies of film-related content, ensuring the essence and context are preserved. ",
   },
 ];
 export default Data;

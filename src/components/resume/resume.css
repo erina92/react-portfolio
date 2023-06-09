@@ -68,3 +68,7 @@
 .timeline__institution {
   margin-bottom: 0.5rem;
 }
+
+mark {
+  background-color: hsl(35, 87%, 72%);
+}
