@@ -1,10 +1,10 @@
 import React from "react";
-import HTML from "../../assets/html.svg";
-import CSS from "../../assets/css.svg";
-import Javascript from "../../assets/javascript.svg";
-import ReactLogo from "../../assets/react.svg";
-import BootStrap from "../../assets/bootstrap.svg";
-import VSCode from "../../assets/vscode.svg";
+import HTML from "../../assets/html-5.png";
+import CSS from "../../assets/css.png";
+import Javascript from "../../assets/java-script.png";
+import ReactLogo from "../../assets/react.png";
+import BootStrap from "../../assets/bootstrap.png";
+import VSCode from "../../assets/visual-studio.png";
 import "./skills.css";
 
 const Skills = () => {
