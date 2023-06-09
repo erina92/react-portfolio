@@ -47,3 +47,8 @@
 .contact__form-area textarea {
   resize: none;
 }
+
+.message__sent {
+  margin-top: 1rem;
+  text-align: center;
+}
