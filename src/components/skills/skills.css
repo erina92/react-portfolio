@@ -1,0 +1,16 @@
+.skills__container {
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1.875rem;
+}
+
+.skills__card {
+  text-align: start;
+  padding: 1.875rem;
+  border-radius: var(--border-radius);
+  background-color: var(--container-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.skills__card:hover {
+  transform: translateY(-10px);
+}

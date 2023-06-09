@@ -18,6 +18,11 @@
 
 .home__img {
   border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.home__img:hover {
+  scale: 1.2;
 }
 
 .home__name {
