@@ -55,9 +55,13 @@
 
 @media screen and (max-width: 1024px) {
   .contact__container {
-    grid-template-columns: repeat(1, 700px);
+    grid-template-columns: repeat(1, 600px);
     justify-content: center;
     row-gap: 1.875rem;
+  }
+
+  .contact__form-group {
+    grid-template-columns: 1fr;
   }
 }
 

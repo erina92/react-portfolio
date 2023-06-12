@@ -83,7 +83,7 @@ mark {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .resume__container {
-    grid-template-columns: 700px;
+    grid-template-columns: 500px;
     row-gap: 1.875rem;
     justify-content: center;
   }

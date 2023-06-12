@@ -28,7 +28,8 @@
 
 @media screen and (max-width: 1024px) {
   .skills__container {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 150px);
+    justify-content: center;
   }
 }
 

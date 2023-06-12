@@ -62,7 +62,8 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .services__container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 500px;
     row-gap: 1.875rem;
+    justify-content: center;
   }
 }
