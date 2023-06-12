@@ -1,6 +1,18 @@
 .skills__container {
   grid-template-columns: repeat(6, 1fr);
   column-gap: 1.875rem;
+  row-gap: 1.875rem;
+}
+
+.skill__filters {
+  display: flex;
+  align-items: center;
+  column-gap: 1.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.skill__item {
+  font-weight: var(--font-bold);
 }
 
 .skills__card {

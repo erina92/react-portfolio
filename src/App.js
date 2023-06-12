@@ -16,10 +16,10 @@ function App() {
       <main className="main">
         <Home />
         <About />
+        <Skills />
         <Services />
         <Resume />
         <Portfolio />
-        <Skills />
         <Contact />
       </main>
     </div>
