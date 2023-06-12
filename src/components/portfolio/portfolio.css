@@ -96,3 +96,27 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media screen and (max-width: 1024px) {
+  .work__filters {
+    justify-content: center;
+  }
+  .work__container {
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work__filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    row-gap: 1rem;
+  }
+  .work__container {
+    grid-template-columns: 300px;
+  }
+}

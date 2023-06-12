@@ -27,6 +27,14 @@ const AboutBox = () => {
           <span className="about__subtitle">Satisfied clients</span>
         </div>
       </div>
+      <div className="about__box">
+        <i className="about__icon fa-regular fa-hourglass-half"></i>
+
+        <div>
+          <h3 className="about__title">10+</h3>
+          <span className="about__subtitle">Years of learning</span>
+        </div>
+      </div>
     </div>
   );
 };

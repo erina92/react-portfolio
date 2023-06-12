@@ -25,3 +25,19 @@
 .skills__card:hover {
   transform: translateY(-10px);
 }
+
+@media screen and (max-width: 1024px) {
+  .skills__container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .skills__card {
+    padding: 0.5rem;
+  }
+}

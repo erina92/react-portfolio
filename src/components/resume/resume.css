@@ -72,3 +72,22 @@
 mark {
   background-color: hsl(35, 87%, 72%);
 }
+
+@media screen and (max-width: 768px) {
+  .resume__container {
+    grid-template-columns: 370px;
+    row-gap: 1.875rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .resume__container {
+    grid-template-columns: 700px;
+    row-gap: 1.875rem;
+    justify-content: center;
+  }
+  .timeline__item::before {
+    left: 2px;
+  }
+}

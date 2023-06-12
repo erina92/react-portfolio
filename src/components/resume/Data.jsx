@@ -23,9 +23,6 @@ const Data = [
     year: "2015 - 2018",
     title: "Master's Degree in Specialized Translation",
     institution: "University of Bari Aldo Moro",
-    desc: "Gaining expertise and knowledge in CAT (Computer-Assisted Translation) tools and specialized technical translation.",
-    thesis:
-      "Thesis: Analysis and Translation of Metaphor in Economic Discourse: A Case Study of the Subprime Mortgage Crisis.",
   },
   {
     id: 4,
@@ -35,9 +32,6 @@ const Data = [
     title:
       "Bachelor's degree in Language and Intercultural Mediation, Linguistic and Intercultural Communication",
     institution: "University of Bari Aldo Moro",
-    desc: "Acquiring linguistic-theoretical, methodological, and applied skills, as well as knowledge of diverse cultural systems in the countries where the studied languages (English, French, and German) are spoken.",
-    thesis:
-      "Thesis: The Big Bang Theory: Analyzing English-Specific Humor in the Dubbed Version.",
   },
   {
     id: 5,
@@ -46,7 +40,6 @@ const Data = [
     year: "2019 - 2021",
     title: "Consecutive interpreter",
     institution: "Fincantieri",
-    desc: "Empowering the Qatari Navy: Specialized interpretation and translation services catered to the courses of 'Electricians,' 'Telecommunications,' and 'Arms and Ammunition' for aspiring sailors, both non-commissioned officers and enlisted personnel, at the esteemed Marine School in Taranto. ",
   },
   {
     id: 6,
@@ -55,7 +48,6 @@ const Data = [
     year: "2017 - 2020",
     title: "Translator",
     institution: "SJS Engineering srl",
-    desc: "Language Bridge: Facilitating effective communication through comprehensive translation services. Proficient in English to Italian and Italian to English translations of e-mails, work projects, glossaries, and technical manuals. Skilled in managing incoming and outgoing emails and calls with foreign clients, ensuring seamless collaboration and fostering strong business relationships.",
   },
   {
     id: 7,
@@ -64,7 +56,6 @@ const Data = [
     year: "2009 - 2013",
     title: "Transcriber",
     institution: "Alchemy Translations",
-    desc: "Unlocking the Power of Image-to-Text: Experience seamless image transcription services utilizing cutting-edge online OCR software. Expertise in converting images into text with precision and accuracy.",
   },
   {
     id: 8,
@@ -73,7 +64,6 @@ const Data = [
     year: "2019",
     title: "Audiovisual Translator",
     institution: "10D Film",
-    desc: "Offering professional translation services for film subjects from Italian to French. Specialized in accurately translating the intricacies of film-related content, ensuring the essence and context are preserved. ",
   },
 ];
 export default Data;

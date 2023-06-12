@@ -12,6 +12,25 @@
   font-weight: 300;
   src: local("IntroScript"), url("./font/IntroScript.otf") format("opentype");
 }
+@font-face {
+  font-family: Rhode;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Rhode"), url("./font/Rhode.ttf") format("truetype");
+}
+@font-face {
+  font-family: Sunflower;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Sunflower"), url("./font/Sunflower.otf") format("opentype");
+}
+@font-face {
+  font-family: iAWriterDuoSpace-Regular;
+  font-style: normal;
+  font-weight: 300;
+  src: local("iAWriterDuospace-Regular"),
+    url("./font/iAWriterDuospace-Regular.otf") format("opentype");
+}
 
 /*============== Variable CSS ==============*/
 
@@ -25,7 +44,7 @@
 
   /*===== Fonts ======*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: JunMono;
+  --body-font: iAWriterDuospace-Regular;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.25rem;

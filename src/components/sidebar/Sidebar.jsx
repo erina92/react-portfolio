@@ -4,62 +4,68 @@ import Logo from "../../assets/coding.png";
 
 const Sidebar = () => {
   return (
-    <aside className="aside">
-      <a href="#home" className="nav__logo">
-        <img src={Logo} alt="" />
-      </a>
+    <>
+      <aside className="aside">
+        <a href="#home" className="nav__logo">
+          <img src={Logo} alt="" />
+        </a>
 
-      <nav className="nav">
-        <div className="nav__menu">
-          <ul className="nav__list">
-            <li className="nav__item">
-              <a href="#home" className="nav__link" title="Home">
-                <i className="fa-solid fa-house"></i>
-              </a>
-            </li>
+        <nav className="nav">
+          <div className="nav__menu">
+            <ul className="nav__list">
+              <li className="nav__item">
+                <a href="#home" className="nav__link" title="Home">
+                  <i className="fa-solid fa-house"></i>
+                </a>
+              </li>
 
-            <li className="nav__item">
-              <a href="#about" className="nav__link" title="About">
-                <i className="fa-solid fa-user"></i>
-              </a>
-            </li>
+              <li className="nav__item">
+                <a href="#about" className="nav__link" title="About">
+                  <i className="fa-solid fa-user"></i>
+                </a>
+              </li>
 
-            <li className="nav__item">
-              <a href="#skills" className="nav__link" title="Skills">
-                <i className="fa-solid fa-wrench"></i>
-              </a>
-            </li>
+              <li className="nav__item">
+                <a href="#skills" className="nav__link" title="Skills">
+                  <i className="fa-solid fa-wrench"></i>
+                </a>
+              </li>
 
-            <li className="nav__item">
-              <a href="#services" className="nav__link">
-                <i className="fa-solid fa-briefcase"></i>
-              </a>
-            </li>
+              <li className="nav__item">
+                <a href="#services" className="nav__link">
+                  <i className="fa-solid fa-briefcase"></i>
+                </a>
+              </li>
 
-            <li className="nav__item">
-              <a href="#resume" className="nav__link" title="Resume">
-                <i className="fa-solid fa-graduation-cap"></i>
-              </a>
-            </li>
+              <li className="nav__item">
+                <a href="#resume" className="nav__link" title="Resume">
+                  <i className="fa-solid fa-graduation-cap"></i>
+                </a>
+              </li>
 
-            <li className="nav__item">
-              <a href="#portfolio" className="nav__link" title="Portfolio">
-                <i className="fa-solid fa-layer-group"></i>
-              </a>
-            </li>
+              <li className="nav__item">
+                <a href="#portfolio" className="nav__link" title="Portfolio">
+                  <i className="fa-solid fa-layer-group"></i>
+                </a>
+              </li>
 
-            <li className="nav__item">
-              <a href="#contact" className="nav__link" title="Contact">
-                <i className="fa-solid fa-envelope"></i>
-              </a>
-            </li>
-          </ul>
+              <li className="nav__item">
+                <a href="#contact" className="nav__link" title="Contact">
+                  <i className="fa-solid fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div className="nav__footer">
+          <span className="copyright">&copy; 2022 - 2023.</span>
         </div>
-      </nav>
-      <div className="nav__footer">
-        <span className="copyright">&copy; 2022 - 2023.</span>
+      </aside>
+
+      <div className="nav__toggle">
+        <i className="fa-solid fa-bars"></i>
       </div>
-    </aside>
+    </>
   );
 };
 

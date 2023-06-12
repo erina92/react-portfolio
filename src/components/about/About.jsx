@@ -16,7 +16,7 @@ const About = () => {
           <div className="about__info">
             <p className="about__description">
               I'm Erika Miglietta, a translator/interpreter and web developer
-              from Taranto, Italy. I specialize in JavaScript and React,
+              from Taranto, Italy. <br /> I specialize in JavaScript and React,
               building interactive applications while bridging the gap between
               languages and technologies.
             </p>

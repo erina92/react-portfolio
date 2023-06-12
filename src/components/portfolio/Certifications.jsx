@@ -2,7 +2,7 @@ import Cert1 from "../../assets/basics.png";
 import Cert2 from "../../assets/basicsaddon.png";
 import Cert3 from "../../assets/plus.png";
 import Cert4 from "../../assets/responsive.png";
-import Cert5 from "../../assets/react.png";
+import Cert5 from "../../assets/react-2.png";
 import Cert6 from "../../assets/reactaddon.png";
 
 const Certifications = [

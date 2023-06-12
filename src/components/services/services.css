@@ -52,3 +52,17 @@
 .services__card:nth-child(2) .services__description {
   color: var(--text-color);
 }
+
+@media screen and (max-width: 768px) {
+  .services__container {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1.875rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.875rem;
+  }
+}

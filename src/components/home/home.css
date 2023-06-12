@@ -159,3 +159,9 @@
   right: 2%;
   bottom: 10%;
 }
+
+@media screen and (max-width: 1024px) {
+  .socials__link {
+    font-size: 1.125rem;
+  }
+}
