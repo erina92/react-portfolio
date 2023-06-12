@@ -169,3 +169,9 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .about__container {
+    grid-template-columns: 320px;
+  }
+}

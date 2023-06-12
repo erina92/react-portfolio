@@ -75,9 +75,26 @@ mark {
 
 @media screen and (max-width: 768px) {
   .resume__container {
-    grid-template-columns: 370px;
+    grid-template-columns: 380px;
     row-gap: 1.875rem;
     justify-content: center;
+  }
+  .timeline__item {
+    padding-left: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
+  .timeline__item::before {
+    left: 0;
+  }
+
+  .timeline .icon-briefcase,
+  .timeline .icon-graduation {
+    left: -9px;
+  }
+
+  .timeline__text {
+    text-align: justify;
   }
 }
 
@@ -89,5 +106,28 @@ mark {
   }
   .timeline__item::before {
     left: 2px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .resume__container {
+    grid-template-columns: 280px;
+  }
+  .timeline__item {
+    padding-left: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
+  .timeline__item::before {
+    left: 0;
+  }
+
+  .timeline .icon-briefcase,
+  .timeline .icon-graduation {
+    left: -9px;
+  }
+
+  .timeline__text {
+    text-align: justify;
   }
 }
