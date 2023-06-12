@@ -111,7 +111,7 @@ mark {
 
 @media screen and (max-width: 350px) {
   .resume__container {
-    grid-template-columns: 280px;
+    grid-template-columns: 1fr;
   }
   .timeline__item {
     padding-left: 1.875rem;

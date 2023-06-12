@@ -88,7 +88,7 @@
 }
 
 .about__boxes {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 1.97rem;
   margin-top: 4.35rem;
 }
@@ -173,5 +173,19 @@
 @media screen and (max-width: 576px) {
   .about__container {
     grid-template-columns: 320px;
+  }
+  .about__boxes {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .about__container {
+    grid-template-columns: 1fr;
+  }
+  .about__boxes {
+    grid-template-columns: 1fr;
   }
 }
