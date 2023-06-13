@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import HTML from "../../assets/html-5.png";
 import CSS from "../../assets/css.png";
 import Javascript from "../../assets/js-2.png";
@@ -13,14 +13,20 @@ import Slack from "../../assets/slack-logo.png";
 import NetlifyLogo from "../../assets/netlify.svg";
 import Nodejs from "../../assets/nodejs.png";
 import Paintnet from "../../assets/paint.png";
+import LanguageContext from "../../components/language/LanguageContext";
 import "./skills.css";
 
 const Skills = () => {
+  const { isItalian } = useContext(LanguageContext);
   return (
     <section className="skills container section" id="skills">
-      <h2 className="section__title">Skills</h2>
+      <h2 className="section__title">{isItalian ? "Competenze" : "Skills"}</h2>
       <div className="skill__filters">
-        <span className="skill__item">Languages & Tools</span>
+        <span className="skill__item">
+          {isItalian
+            ? "Linguaggi di programmazione e software"
+            : "Languages & Tools"}
+        </span>
       </div>
 
       <div className="skills__container grid">

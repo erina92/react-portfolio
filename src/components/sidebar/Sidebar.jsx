@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./sidebar.css";
 import Logo from "../../assets/coding.png";
+import LanguageContext from "../language/LanguageContext";
+import Select from "react-select";
 
 const Sidebar = () => {
   const [toggle, showMenu] = useState(false);
+  const { isItalian, toggleLanguage } = useContext(LanguageContext);
+  const languageOptions = [
+    { value: "en", label: "En" },
+    { value: "it", label: "It" },
+  ];
+
+  const handleLanguageChange = (selectedOption) => {
+    const selectedLanguage = selectedOption.value;
+    toggleLanguage(selectedLanguage);
+  };
 
   return (
     <>
@@ -15,6 +27,19 @@ const Sidebar = () => {
         <nav className="nav">
           <div className="nav__menu">
             <ul className="nav__list">
+              <li className="nav__item">
+                <div className="nav__link language">
+                  <Select
+                    options={languageOptions}
+                    onChange={handleLanguageChange}
+                    defaultValue={languageOptions.find((option) =>
+                      option.value === isItalian ? "it" : "en"
+                    )}
+                    className="language-dropdown"
+                    classNamePrefix="language-dropdown"
+                  />
+                </div>
+              </li>
               <li className="nav__item">
                 <a href="#home" className="nav__link" title="Home">
                   <i className="fa-solid fa-house"></i>
