@@ -37,10 +37,9 @@
   color: hsl(189deg, 43%, 73%);
 }
 
-.language-dropdown {
-  width: 78px;
+.language-dropdown__dropdown-indicator {
+  margin-right: 0.5rem;
 }
-
 .language-dropdown__control {
   border: none !important;
   background-color: white;

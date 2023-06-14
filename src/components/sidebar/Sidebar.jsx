@@ -8,9 +8,9 @@ const Sidebar = ({ toggleDarkMode }) => {
   const [toggle, showMenu] = useState(false);
   const { isItalian, isFrench, toggleLanguage } = useContext(LanguageContext);
   const languageOptions = [
-    { value: "en", label: "En" },
-    { value: "it", label: "It" },
-    { value: "fr", label: "Fr" },
+    { value: "en", label: "🇺🇸" },
+    { value: "it", label: "🇮🇹" },
+    { value: "fr", label: "🇫🇷" },
   ];
 
   const handleLanguageChange = (selectedOption) => {
@@ -37,7 +37,7 @@ const Sidebar = ({ toggleDarkMode }) => {
             <ul className="nav__list">
               <li className="nav__item">
                 <a
-                  href="/#"
+                  href="#!"
                   onClick={toggleDarkMode}
                   className="nav__link"
                   title="Dark Mode"
@@ -50,8 +50,10 @@ const Sidebar = ({ toggleDarkMode }) => {
                   <Select
                     options={languageOptions}
                     onChange={handleLanguageChange}
-                    components={{ IndicatorSeparator: () => null }}
-                    autoWidth
+                    components={{
+                      IndicatorSeparator: () => null,
+                      DropdownIndicator: () => null,
+                    }}
                     defaultValue={languageOptions.find(
                       (option) =>
                         option.value ===
