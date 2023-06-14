@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import LanguageContext from "../language/LanguageContext";
 
 const AboutBox = () => {
-  const { isItalian } = useContext(LanguageContext);
+  const { isItalian, isFrench } = useContext(LanguageContext);
   return (
     <div className="about__boxes grid">
       <div className="about__box">
@@ -11,7 +11,11 @@ const AboutBox = () => {
         <div>
           <h3 className="about__title">3</h3>
           <span className="about__subtitle">
-            {isItalian ? "Progetti Completati" : "Projects Completed"}
+            {isItalian
+              ? "Progetti Completati"
+              : isFrench
+              ? "Projets réalisés"
+              : "Projects Completed"}
           </span>
         </div>
       </div>
@@ -21,7 +25,11 @@ const AboutBox = () => {
         <div>
           <h3 className="about__title">6000</h3>
           <span className="about__subtitle">
-            {isItalian ? "Tazzine di caffè" : "Cups of coffee"}
+            {isItalian
+              ? "Tazzine di caffè"
+              : isFrench
+              ? "Tasses de café"
+              : "Cups of coffee"}
           </span>
         </div>
       </div>
@@ -31,7 +39,11 @@ const AboutBox = () => {
         <div>
           <h3 className="about__title">20</h3>
           <span className="about__subtitle">
-            {isItalian ? "Clienti soddisfatti" : "Satisfied clients"}
+            {isItalian
+              ? "Clienti soddisfatti"
+              : isFrench
+              ? "Clients satisfaits"
+              : "Satisfied clients"}
           </span>
         </div>
       </div>
@@ -41,7 +53,11 @@ const AboutBox = () => {
         <div>
           <h3 className="about__title">10+</h3>
           <span className="about__subtitle">
-            {isItalian ? "Anni di studio" : "Years of learning"}
+            {isItalian
+              ? "Anni di studio"
+              : isFrench
+              ? "Années d'apprentissage"
+              : "Years of learning"}
           </span>
         </div>
       </div>

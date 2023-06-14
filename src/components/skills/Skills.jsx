@@ -17,14 +17,18 @@ import LanguageContext from "../../components/language/LanguageContext";
 import "./skills.css";
 
 const Skills = () => {
-  const { isItalian } = useContext(LanguageContext);
+  const { isItalian, isFrench } = useContext(LanguageContext);
   return (
     <section className="skills container section" id="skills">
-      <h2 className="section__title">{isItalian ? "Competenze" : "Skills"}</h2>
+      <h2 className="section__title">
+        {isItalian ? "Competenze" : isFrench ? "Compétences" : "Skills"}
+      </h2>
       <div className="skill__filters">
         <span className="skill__item">
           {isItalian
             ? "Linguaggi di programmazione e software"
+            : isFrench
+            ? "Langages de programmation & Logiciels"
             : "Languages & Tools"}
         </span>
       </div>

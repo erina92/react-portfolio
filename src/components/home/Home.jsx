@@ -7,7 +7,7 @@ import Shapes from "./Shapes";
 import LanguageContext from "../language/LanguageContext";
 
 const Home = () => {
-  const { isItalian } = useContext(LanguageContext);
+  const { isItalian, isFrench } = useContext(LanguageContext);
 
   return (
     <section className="home container" id="home">
@@ -17,13 +17,15 @@ const Home = () => {
         <span className="home__education">
           {isItalian
             ? "Sono una traduttrice e una sviluppatrice Front-End"
+            : isFrench
+            ? "Je suis traductrice et développeuse Front-End"
             : "I am a Translator and a Front-End Developer"}
         </span>
 
         <HeaderSocials />
 
         <a href="#contact" className="btn">
-          {isItalian ? "Contattami" : "Hire Me"}
+          {isItalian ? "Contattami" : isFrench ? "Contactez-moi" : "Hire Me"}
         </a>
 
         <ScrollDown />

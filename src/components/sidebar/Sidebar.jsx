@@ -6,15 +6,23 @@ import Select from "react-select";
 
 const Sidebar = () => {
   const [toggle, showMenu] = useState(false);
-  const { isItalian, toggleLanguage } = useContext(LanguageContext);
+  const { isItalian, isFrench, toggleLanguage } = useContext(LanguageContext);
   const languageOptions = [
     { value: "en", label: "En" },
     { value: "it", label: "It" },
+    { value: "fr", label: "Fr" },
   ];
 
   const handleLanguageChange = (selectedOption) => {
     const selectedLanguage = selectedOption.value;
-    toggleLanguage(selectedLanguage);
+
+    if (selectedLanguage === "it") {
+      toggleLanguage("it");
+    } else if (selectedLanguage === "fr") {
+      toggleLanguage("fr");
+    } else {
+      toggleLanguage("en");
+    }
   };
 
   return (
@@ -32,8 +40,10 @@ const Sidebar = () => {
                   <Select
                     options={languageOptions}
                     onChange={handleLanguageChange}
-                    defaultValue={languageOptions.find((option) =>
-                      option.value === isItalian ? "it" : "en"
+                    defaultValue={languageOptions.find(
+                      (option) =>
+                        option.value ===
+                        (isItalian ? "it" : isFrench ? "fr" : "en")
                     )}
                     className="language-dropdown"
                     classNamePrefix="language-dropdown"

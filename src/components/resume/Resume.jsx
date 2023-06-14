@@ -4,7 +4,7 @@ import Card from "./Card";
 import LanguageContext from "../../components/language/LanguageContext";
 
 const Resume = () => {
-  const { isItalian } = useContext(LanguageContext);
+  const { isItalian, isFrench } = useContext(LanguageContext);
   const Data = [
     {
       id: 1,
@@ -15,6 +15,8 @@ const Resume = () => {
       institution: "SheCodes",
       desc: isItalian
         ? "Workshop di Programmazione online per donne"
+        : isFrench
+        ? "Un atelier de code réservé aux femmes"
         : "Online Coding Workshops for Women",
     },
     {
@@ -32,6 +34,8 @@ const Resume = () => {
       year: "2015 - 2018",
       title: isItalian
         ? "Master in Traduzione Specialistica (LM94)"
+        : isFrench
+        ? "Master en Traduction Spécialisée."
         : "Master's Degree in Specialized Translation",
       institution: "University of Bari Aldo Moro",
     },
@@ -42,6 +46,8 @@ const Resume = () => {
       year: "2011 - 2015",
       title: isItalian
         ? "Laurea Triennale in Comunicazione Linguistica e Interculturale(L12)"
+        : isFrench
+        ? "Diplôme de licence en Médiation Linguistique et Interculturelle, Communication Linguistique et Interculturelle."
         : "Bachelor's degree in Language and Intercultural Mediation, Linguistic and Intercultural Communication",
       institution: "University of Bari Aldo Moro",
     },
@@ -50,7 +56,11 @@ const Resume = () => {
       category: "experience",
       icon: "icon-briefcase",
       year: "2019 - 2021",
-      title: isItalian ? "Interprete" : "Consecutive interpreter",
+      title: isItalian
+        ? "Interprete"
+        : isFrench
+        ? "Interprète consécutif"
+        : "Consecutive interpreter",
       institution: "Fincantieri",
     },
     {
@@ -58,7 +68,11 @@ const Resume = () => {
       category: "experience",
       icon: "icon-briefcase",
       year: "2017 - 2020",
-      title: isItalian ? "Traduttore Tecnico" : "Translator",
+      title: isItalian
+        ? "Traduttore Tecnico"
+        : isFrench
+        ? "Traductrice"
+        : "Translator",
       institution: "SJS Engineering srl",
     },
     {
@@ -66,7 +80,11 @@ const Resume = () => {
       category: "experience",
       icon: "icon-briefcase",
       year: "2009 - 2013",
-      title: isItalian ? "Trascrittore" : "Transcriber",
+      title: isItalian
+        ? "Trascrittrice"
+        : isFrench
+        ? "Transcriptrice"
+        : "Transcriber",
       institution: "Alchemy Translations",
     },
     {
@@ -74,14 +92,18 @@ const Resume = () => {
       category: "experience",
       icon: "icon-briefcase",
       year: "2019",
-      title: isItalian ? "Traduttore Audiovisivo" : "Audiovisual Translator",
+      title: isItalian
+        ? "Traduttore Audiovisivo"
+        : isFrench
+        ? "Traductrice audiovisuelle"
+        : "Audiovisual Translator",
       institution: "10D Film",
     },
   ];
   return (
     <section className="resume container section" id="resume">
       <h2 className="section__title">
-        {isItalian ? "Esperienze" : "Experience"}
+        {isItalian ? "Esperienze" : isFrench ? "Expérience " : "Experience"}
       </h2>
 
       <div className="resume__container grid">

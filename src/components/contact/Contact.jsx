@@ -1,10 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
+import LanguageContext from "../language/LanguageContext";
 
 const Contact = () => {
   const form = useRef();
   const [message, setMessage] = useState("");
+  const { isItalian, isFrench } = useContext(LanguageContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -29,13 +31,29 @@ const Contact = () => {
 
   return (
     <section className="contact container section" id="contact">
-      <h2 className="section__title">Get In Touch</h2>
+      <h2 className="section__title">
+        {isItalian
+          ? "Contattami"
+          : isFrench
+          ? "On reste en contact!"
+          : "Get In Touch"}
+      </h2>
 
       <div className="contact__container grid">
         <div className="contact__info">
-          <h3 className="contact__title">Let's talk about everything!</h3>
+          <h3 className="contact__title">
+            {isItalian
+              ? "Facciamoci una chiaccherata"
+              : isFrench
+              ? "Parlons de tout"
+              : "Let's talk about everything!"}
+          </h3>
           <p className="contact__details">
-            Don't like forms? Send me an email. 👋
+            {isItalian
+              ? "Scrivimi tramite questo modulo 👋🏻"
+              : isFrench
+              ? "Écrivez-moi via ce formulaire et je recevrai un e-mail!"
+              : "Send me an email through this form 👋"}
           </p>
         </div>
 
@@ -45,7 +63,9 @@ const Contact = () => {
               <input
                 className="contact__form-input"
                 type="text"
-                placeholder="Insert your name"
+                placeholder={
+                  isItalian ? "Nome" : isFrench ? "Nom" : "Insert your name"
+                }
                 name="user_name"
                 required
               />
@@ -55,7 +75,13 @@ const Contact = () => {
               <input
                 className="contact__form-input"
                 type="email"
-                placeholder="Insert your email"
+                placeholder={
+                  isItalian
+                    ? "Email"
+                    : isFrench
+                    ? "E-mail"
+                    : "Insert your email"
+                }
                 name="user_email"
                 required
               />
@@ -66,7 +92,13 @@ const Contact = () => {
             <input
               className="contact__form-input"
               type="text"
-              placeholder="Insert your subject"
+              placeholder={
+                isItalian
+                  ? "Oggetto"
+                  : isFrench
+                  ? "Objet"
+                  : "Insert your subject"
+              }
               name="subject"
               required
             />
@@ -78,11 +110,23 @@ const Contact = () => {
               cols="30"
               rows="10"
               className="contact__form-input"
-              placeholder="Write your message"
+              placeholder={
+                isItalian
+                  ? "Messaggio"
+                  : isFrench
+                  ? "Message"
+                  : "Write your message"
+              }
             ></textarea>
           </div>
 
-          <button className="btn">Send Message</button>
+          <button className="btn">
+            {isItalian
+              ? "Invia Messaggio"
+              : isFrench
+              ? "Envoyer Message"
+              : "Send Message"}
+          </button>
           {message && <p className="message__sent">🎉{message}🎉</p>}
         </form>
       </div>
