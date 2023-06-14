@@ -9,12 +9,15 @@ import Resume from "./components/resume/Resume";
 import Portfolio from "./components/portfolio/Portfolio";
 import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
+import DarkMode from "./DarkMode";
 
 function App() {
+  const [darkMode, toggleDarkMode] = DarkMode();
+
   return (
     <LanguageProvider>
-      <div>
-        <Sidebar />
+      <div className={darkMode ? "dark-mode" : ""}>
+        <Sidebar toggleDarkMode={toggleDarkMode} />
         <main className="main">
           <Home />
           <About />

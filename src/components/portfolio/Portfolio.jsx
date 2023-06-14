@@ -102,7 +102,11 @@ const Portfolio = () => {
     {
       id: 1,
       image: Work1,
-      title: isItalian ? "App Orologio " : isFrench ? "" : "World Clock App",
+      title: isItalian
+        ? "App Orologio "
+        : isFrench
+        ? "Application de fuseaux horaires mondiaux"
+        : "World Clock App",
       category: isItalian
         ? "Sviluppo Web"
         : isFrench
@@ -113,7 +117,11 @@ const Portfolio = () => {
     {
       id: 2,
       image: Work2,
-      title: isItalian ? "App Meteo" : isFrench ? "" : "Weather App",
+      title: isItalian
+        ? "App Meteo"
+        : isFrench
+        ? "Application météo"
+        : "Weather App",
       category: isItalian
         ? "Integrazione API"
         : isFrench

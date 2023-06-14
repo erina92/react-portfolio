@@ -45,12 +45,12 @@
 }
 
 .socials__link:hover {
-  color: hsl(189deg, 43%, 73%);
+  color: hsl(189, 43%, 73%);
 }
 
 .scroll__down {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   left: 0;
   width: 100%;
 }
@@ -93,7 +93,7 @@
   position: absolute;
   top: 0.5rem;
   left: 40%;
-  trasform: translateX(-50%);
+  transform: translateX(-50%);
   animation: ani-mouse 1.5s linear infinite;
 }
 
@@ -119,10 +119,7 @@
   left: 18%;
   top: 30%;
 }
-.s1 {
-  left: 2%;
-  top: 10%;
-}
+
 .s3 {
   left: 5%;
   bottom: 30%;

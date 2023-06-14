@@ -45,12 +45,9 @@
   text-align: center;
 }
 
-.services__card:nth-child(2) .services__title {
-  color: var(--title-color);
-}
-
-.services__card:nth-child(2) .services__description {
-  color: var(--text-color);
+.services__description,
+.services__title {
+  color: hsl(249, 23%, 12%);
 }
 
 @media screen and (max-width: 768px) {

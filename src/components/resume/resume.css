@@ -31,14 +31,14 @@
   background-color: var(--first-color);
 }
 
-.timeline .icon-briefcase,
-.timeline .icon-graduation {
+.timeline .fa-graduation-cap,
+.timeline .fa-briefcase {
   position: absolute;
-  left: -0.4375rem;
-  top: 0;
+  left: -0.7rem;
+  top: -0.5rem;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
-  background-color: var(--container-color);
+  color: hsl(249, 23%, 12%);
+  background-color: transparent;
   padding: 0.4375rem 0;
 }
 

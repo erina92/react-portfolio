@@ -15,8 +15,8 @@
   transition: 0.3s;
 }
 
-.nav__logo {
-  width: 35px;
+.fa-code {
+  color: hsl(249, 23%, 12%);
 }
 
 .nav__list {
@@ -38,13 +38,12 @@
 }
 
 .language-dropdown {
-  width: 80px;
+  width: 78px;
 }
 
 .language-dropdown__control {
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  border: none !important;
+  background-color: white;
   display: flex;
   align-items: center;
 }
@@ -53,10 +52,10 @@
   padding: 0.3rem;
   width: 100%;
   overflow: visible;
+  text-align: center;
 }
 
 .language-dropdown__menu {
-  border-radius: 4px;
   margin-top: 0.5rem;
   width: 100%;
 }
@@ -92,6 +91,7 @@
   align-items: center;
   z-index: 1;
   transition: 0.3s;
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1024px) {

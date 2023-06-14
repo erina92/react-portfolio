@@ -9,7 +9,7 @@ const Resume = () => {
     {
       id: 1,
       category: "education",
-      icon: "icon-graduation",
+      icon: "fa-solid fa-graduation-cap",
       year: "2022 - 2023",
       title: "SheCodes React Web Development",
       institution: "SheCodes",
@@ -22,7 +22,7 @@ const Resume = () => {
     {
       id: 2,
       category: "education",
-      icon: "icon-graduation",
+      icon: "fa-solid fa-graduation-cap",
       year: "2022",
       title: "EF set English Certificate C1 advanced",
       institution: "EF - Education First Italia",
@@ -30,7 +30,7 @@ const Resume = () => {
     {
       id: 3,
       category: "education",
-      icon: "icon-graduation",
+      icon: "fa-solid fa-graduation-cap",
       year: "2015 - 2018",
       title: isItalian
         ? "Master in Traduzione Specialistica (LM94)"
@@ -42,7 +42,7 @@ const Resume = () => {
     {
       id: 4,
       category: "education",
-      icon: "icon-graduation",
+      icon: "fa-solid fa-graduation-cap",
       year: "2011 - 2015",
       title: isItalian
         ? "Laurea Triennale in Comunicazione Linguistica e Interculturale(L12)"
@@ -54,7 +54,7 @@ const Resume = () => {
     {
       id: 5,
       category: "experience",
-      icon: "icon-briefcase",
+      icon: "fa-solid fa-briefcase",
       year: "2019 - 2021",
       title: isItalian
         ? "Interprete"
@@ -66,7 +66,7 @@ const Resume = () => {
     {
       id: 6,
       category: "experience",
-      icon: "icon-briefcase",
+      icon: "fa-solid fa-briefcase",
       year: "2017 - 2020",
       title: isItalian
         ? "Traduttore Tecnico"
@@ -78,7 +78,7 @@ const Resume = () => {
     {
       id: 7,
       category: "experience",
-      icon: "icon-briefcase",
+      icon: "fa-solid fa-briefcase",
       year: "2009 - 2013",
       title: isItalian
         ? "Trascrittrice"
@@ -90,7 +90,7 @@ const Resume = () => {
     {
       id: 8,
       category: "experience",
-      icon: "icon-briefcase",
+      icon: "fa-solid fa-briefcase",
       year: "2019",
       title: isItalian
         ? "Traduttore Audiovisivo"

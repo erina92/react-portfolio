@@ -101,6 +101,142 @@ body {
   color: var(--text-color);
 }
 
+/*=============== Dark Mode ==============*/
+
+body.dark-mode {
+  background-color: hsl(249, 23%, 12%);
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .fa-code {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .nav__logo:hover,
+.dark-mode .nav__link:hover {
+  color: rgb(196, 167, 231);
+}
+.dark-mode .aside {
+  background-color: hsl(249, 23%, 12%);
+}
+
+.dark-mode .language-dropdown__control,
+.dark-mode .language-dropdown__value-container,
+.dark-mode .language-dropdown__single-value {
+  background-color: transparent;
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .language-dropdown__menu {
+  color: hsl(248, 49%, 91%);
+  background-color: hsl(249, 23%, 12%);
+}
+
+.dark-mode .nav__link {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .home__name {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .socials__link {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .socials__link:hover {
+  color: rgb(196, 167, 231);
+}
+
+.dark-mode .btn {
+  background-color: rgb(196, 167, 231);
+  color: hsl(249, 23%, 12%);
+}
+
+.dark-mode .home__scroll-name {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .mouse {
+  border: 2px solid hsl(248, 49%, 91%);
+}
+
+.dark-mode .wheel {
+  background-color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .section__title {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .about__data {
+  background: rgba(29, 29, 45, 0.54);
+  backdrop-filter: blur(5px);
+}
+
+.dark-mode .about__data::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid rgba(29, 29, 45, 0.54);
+  border-bottom: 10px solid rgba(29, 29, 45, 0.54);
+  border-right: 15px solid rgba(29, 29, 45, 0.54);
+  position: absolute;
+  left: -0.93rem;
+  top: 20%;
+}
+
+.dark-mode .skills__card {
+  background: rgba(29, 29, 45, 0.54);
+  backdrop-filter: blur(5px);
+}
+
+.dark-mode .timeline {
+  background: rgba(29, 29, 45, 0.54);
+  backdrop-filter: blur(5px);
+}
+
+.dark-mode .timeline__title {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .timeline__item::before {
+  background-color: hsl(344, 76%, 68%);
+}
+
+.dark-mode .timeline .fa-graduation-cap,
+.dark-mode .timeline .fa-briefcase {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .work__mask {
+  background: hsl(249, 15%, 38%);
+}
+
+.dark-mode .work__category {
+  background-color: hsl(344, 76%, 68%);
+}
+
+.dark-mode .work__button {
+  color: rgba(29, 29, 45);
+  background-color: hsl(344, 76%, 68%);
+}
+
+.dark-mode .work__title {
+  color: rgb(224, 222, 244);
+}
+
+.dark-mode .contact__title {
+  color: rgb(224, 222, 244);
+}
+
+.dark-mode .nav__toggle {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid hsl(249, 15%, 38%);
+}
+/*=============================*/
+
 h1,
 h2,
 h3 {

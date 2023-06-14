@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import "./sidebar.css";
-import Logo from "../../assets/coding.png";
+
 import LanguageContext from "../language/LanguageContext";
 import Select from "react-select";
 
-const Sidebar = () => {
+const Sidebar = ({ toggleDarkMode }) => {
   const [toggle, showMenu] = useState(false);
   const { isItalian, isFrench, toggleLanguage } = useContext(LanguageContext);
   const languageOptions = [
@@ -29,22 +29,43 @@ const Sidebar = () => {
     <>
       <aside className={toggle ? "aside show-menu" : "aside"}>
         <a href="#home" className="nav__logo">
-          <img src={Logo} alt="" />
+          <i className="fa-solid fa-code"></i>
         </a>
 
         <nav className="nav">
           <div className="nav__menu">
             <ul className="nav__list">
               <li className="nav__item">
+                <a
+                  href="/#"
+                  onClick={toggleDarkMode}
+                  className="nav__link"
+                  title="Dark Mode"
+                >
+                  <i className="fa-solid fa-adjust"></i>
+                </a>
+              </li>
+              <li className="nav__item">
                 <div className="nav__link language">
                   <Select
                     options={languageOptions}
                     onChange={handleLanguageChange}
+                    components={{ IndicatorSeparator: () => null }}
+                    autoWidth
                     defaultValue={languageOptions.find(
                       (option) =>
                         option.value ===
                         (isItalian ? "it" : isFrench ? "fr" : "en")
                     )}
+                    theme={(theme) => ({
+                      ...theme,
+                      borderRadius: 0,
+                      colors: {
+                        ...theme.colors,
+                        primary25: "#c4a7e7",
+                        primary: "#c4a7e7",
+                      },
+                    })}
                     className="language-dropdown"
                     classNamePrefix="language-dropdown"
                   />

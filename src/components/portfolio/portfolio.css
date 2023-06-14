@@ -76,7 +76,7 @@
   left: 1.5rem;
   font-size: var(--h3-font-size);
   display: block;
-  background-color: hsl(35deg, 88%, 72%);
+  background-color: hsl(35, 88%, 72%);
   height: 40px;
   width: 40px;
   cursor: pointer;
