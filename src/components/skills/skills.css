@@ -41,6 +41,9 @@
   .skills__card {
     padding: 0.5rem;
   }
+  .skill__filters {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 576px) {

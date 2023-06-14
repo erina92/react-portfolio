@@ -42,7 +42,7 @@
 }
 .language-dropdown__control {
   border: none !important;
-  background-color: white;
+  background-color: transparent !important;
   display: flex;
   align-items: center;
 }
@@ -64,7 +64,7 @@
 }
 
 .language-dropdown__option--is-selected {
-  background-color: #ccc;
+  background-color: transparent;
   color: #fff;
 }
 

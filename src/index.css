@@ -140,6 +140,10 @@ body.dark-mode {
   color: hsl(248, 49%, 91%);
 }
 
+.dark-mode .home__img {
+  box-shadow: 0px 5px 30px 10px rgba(196, 167, 231, 0.7);
+}
+
 .dark-mode .socials__link {
   color: hsl(248, 49%, 91%);
 }
@@ -184,6 +188,10 @@ body.dark-mode {
   position: absolute;
   left: -0.93rem;
   top: 20%;
+}
+
+.dark-mode .skills__name {
+  color: hsl(248, 49%, 91%);
 }
 
 .dark-mode .skills__card {
@@ -231,7 +239,7 @@ body.dark-mode {
 }
 
 .dark-mode .nav__toggle {
-  background-color: transparent;
+  background-color: hsl(249, 23%, 12%);
   border-radius: 10px;
   border: 2px solid hsl(249, 15%, 38%);
 }
