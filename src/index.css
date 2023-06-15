@@ -174,8 +174,7 @@ body.dark-mode {
 }
 
 .dark-mode .about__data {
-  background: rgba(29, 29, 45, 0.54);
-  backdrop-filter: blur(5px);
+  background: rgba(29, 29, 45, 7);
 }
 
 .dark-mode .about__data::before {

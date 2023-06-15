@@ -31,6 +31,9 @@
     grid-template-columns: repeat(4, 150px);
     justify-content: center;
   }
+  .skill__filters {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -49,5 +52,8 @@
 @media screen and (max-width: 576px) {
   .skills__container {
     grid-template-columns: repeat(3, 70px);
+  }
+  .skill__filters {
+    justify-content: center;
   }
 }
