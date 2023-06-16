@@ -32,6 +32,10 @@
   margin-bottom: 0.5rem;
 }
 
+.home__education {
+  font-size: 20px;
+}
+
 .home__socials {
   display: flex;
   column-gap: 5rem;
@@ -41,7 +45,7 @@
 
 .socials__link {
   color: var(--title-color);
-  font-size: 2.3rem;
+  font-size: 2rem;
   transition: 0.3s;
 }
 
