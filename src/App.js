@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import LanguageProvider from "./components/language/LanguageProvider";
 import Home from "./components/home/Home";
