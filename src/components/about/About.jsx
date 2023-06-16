@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import "./about.css";
 import Image from "../../assets/programmer.png";
 import AboutBox from "./AboutBox";
-import CV from "../../cv/CV.pdf";
 import LanguageContext from "../language/LanguageContext";
 
 const About = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
+  const ResumeUrl = "https://www.dropbox.com/s/4u1cx1vn0lqwme2/CV.pdf?dl=0";
   return (
     <section className="about container section" id="about">
       <h2 className="section__title">
@@ -31,7 +31,12 @@ const About = () => {
                 ? "Je suis spécialisée en JavaScript et React, créant des applications interactives tout en jetant un pont entre les langues et les technologies"
                 : "I specialize in JavaScript and React, building interactive applications while bridging the gap between languages and technologies."}
             </p>
-            <a href={CV} className="btn" target="_blank" rel="noreferrer">
+            <a
+              href={ResumeUrl}
+              className="btn"
+              target="_blank"
+              rel="noreferrer"
+            >
               {isItalian
                 ? "Scarica il CV"
                 : isFrench
