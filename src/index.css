@@ -174,19 +174,23 @@ body.dark-mode {
 }
 
 .dark-mode .about__data {
-  background: rgba(29, 29, 45, 7);
+  background: rgb(38, 35, 58);
 }
 
 .dark-mode .about__data::before {
   content: "";
   width: 0;
   height: 0;
-  border-top: 10px solid rgba(29, 29, 45, 0.54);
-  border-bottom: 10px solid rgba(29, 29, 45, 0.54);
-  border-right: 15px solid rgba(29, 29, 45, 0.54);
+  border-top: 10px solid rgb(64, 61, 82);
+  border-bottom: 10px solid rgb(64, 61, 82);
+  border-right: 15px solid rgb(64, 61, 82);
   position: absolute;
   left: -0.93rem;
   top: 20%;
+}
+
+.dark-mode .about__title {
+  color: rgb(110, 106, 134);
 }
 
 .dark-mode .skills__name {
@@ -194,13 +198,11 @@ body.dark-mode {
 }
 
 .dark-mode .skills__card {
-  background: rgba(29, 29, 45, 0.54);
-  backdrop-filter: blur(5px);
+  background: rgb(38, 35, 58);
 }
 
 .dark-mode .timeline {
-  background: rgba(29, 29, 45, 0.54);
-  backdrop-filter: blur(5px);
+  background: rgb(38, 35, 58);
 }
 
 .dark-mode .timeline__title {
