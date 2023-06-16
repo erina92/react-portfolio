@@ -4,6 +4,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import LanguageProvider from "./components/language/LanguageProvider";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
+import Music from "./components/music/Music";
 import Services from "./components/services/Services";
 import Resume from "./components/resume/Resume";
 import Portfolio from "./components/portfolio/Portfolio";
@@ -21,6 +22,7 @@ function App() {
         <main className="main">
           <Home />
           <About />
+          <Music />
           <Skills />
           <Services />
           <Resume />
