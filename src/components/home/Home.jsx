@@ -21,6 +21,8 @@ const Home = () => {
             ? "Je suis traductrice et développeuse Front-End"
             : "I am a Translator and a Front-End Developer"}
         </span>
+        <br />
+        <span className="home__location">📍Taranto, Puglia, Italy</span>
 
         <HeaderSocials />
 

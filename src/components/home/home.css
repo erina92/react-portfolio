@@ -32,10 +32,6 @@
   margin-bottom: 0.5rem;
 }
 
-.home__education {
-  font-size: 20px;
-}
-
 .home__socials {
   display: flex;
   column-gap: 5rem;
