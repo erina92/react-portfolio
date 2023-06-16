@@ -30,6 +30,12 @@ const About = () => {
                 : isFrench
                 ? "Je suis spécialisée en JavaScript et React, créant des applications interactives tout en jetant un pont entre les langues et les technologies"
                 : "I specialize in JavaScript and React, building interactive applications while bridging the gap between languages and technologies."}
+              <br />
+              {isItalian
+                ? "Sono una videogiocatrice sin da quando ero piccola. Aspetto con ansia il nuovo Spider-Man 2 per PS5. Amo leggere manga e guardare anime."
+                : isFrench
+                ? "Je suis une joueuse de jeux vidéo depuis que je suis petite. J'attends avec impatience le nouveau Spider-Man 2 pour PS5. J'adore lire des mangas et regarder des animes."
+                : "I have been a gamer since I was little. I'm eagerly awaiting the new Spider-Man 2 for PS5. I love reading manga and watching anime."}
             </p>
             <a
               href={ResumeUrl}
