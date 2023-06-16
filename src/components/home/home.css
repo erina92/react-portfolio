@@ -107,8 +107,24 @@
   z-index: -1; /* Add a negative z-index to move the Shapes component below the links */
 }
 
+@keyframes shapeAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(100px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
 .shape {
   position: absolute;
+  animation-name: shapeAnimation;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .s1 {
