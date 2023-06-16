@@ -8,7 +8,7 @@ import BootStrap from "../../assets/bootstrap.png";
 import VSCode from "../../assets/visual-studio.png";
 import FigmaLogo from "../../assets/figma.png";
 import GitLogo from "../../assets/git.png";
-import Github from "../../assets/github.png";
+import Github from "../../assets/github-2.png";
 import Slack from "../../assets/slack-logo.png";
 import NetlifyLogo from "../../assets/netlify.svg";
 import Nodejs from "../../assets/nodejs.png";
