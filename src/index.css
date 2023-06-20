@@ -44,7 +44,7 @@
 
   /*===== Fonts ======*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: iAWriterDuoSpace-Regular;
+  --body-font: "Open Sans", sans-serif;
   --h1-font-size: 2.25rem;
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.25rem;

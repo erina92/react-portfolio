@@ -39,6 +39,10 @@
   color: hsl(189deg, 43%, 73%);
 }
 
+.language-dropdown {
+  width: 2.5vw;
+}
+
 .language-dropdown__dropdown-indicator {
   margin-right: 0.5rem;
 }
@@ -108,5 +112,11 @@
   }
   .show-menu {
     left: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .language-dropdown {
+    width: 10vw;
   }
 }
