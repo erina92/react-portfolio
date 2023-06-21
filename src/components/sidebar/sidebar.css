@@ -131,7 +131,7 @@
   }
 
   .copyright {
-    justify-content: center;
+    font-size: 0.5rem;
   }
   .nav__list {
     row-gap: 1rem;
