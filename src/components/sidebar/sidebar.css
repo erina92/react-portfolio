@@ -113,10 +113,30 @@
   .show-menu {
     left: 0;
   }
+
+  .language-dropdown {
+    width: 5vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .language-dropdown {
+    width: 5vw;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .language-dropdown {
     width: 10vw;
+  }
+
+  .copyright {
+    justify-content: center;
+  }
+  .nav__list {
+    row-gap: 1rem;
+  }
+  .nav__link {
+    font-size: 0.8rem;
   }
 }
