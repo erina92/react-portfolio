@@ -126,10 +126,12 @@
 }
 
 @media screen and (max-width: 576px) {
+  .aside {
+    align-items: center;
+  }
   .language-dropdown {
     width: 10vw;
   }
-
   .copyright {
     font-size: 0.5rem;
   }
