@@ -122,7 +122,7 @@
 .shape {
   position: absolute;
   animation-name: shapeAnimation;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
