@@ -12,6 +12,7 @@ import Cert3 from "../../assets/plus.png";
 import Cert4 from "../../assets/responsive.png";
 import Cert5 from "../../assets/react-2.png";
 import Cert6 from "../../assets/reactaddon.png";
+import Cert7 from "../../assets/next.png";
 
 const Portfolio = () => {
   const [showCertifications, setShowCertifications] = useState(false);
@@ -96,6 +97,17 @@ const Portfolio = () => {
         ? "Certifications"
         : "Certifications",
       url: "https://www.shecodes.io/certificates/4da0d18ba5f933738aa49d062813592f",
+    },
+    {
+      id: 7,
+      image: Cert7,
+      title: "SheCodes Next",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: "https://www.shecodes.io/certificates/009e6b3334c2a297b3962f2f96d2c646",
     },
   ];
   const Menu = [
