@@ -103,6 +103,7 @@ const Resume = () => {
   return (
     <section className="resume container section" id="resume">
       <h2 className="section__title">
+        <span className="resume-slash">&#47;</span>
         {isItalian ? "Esperienze" : isFrench ? "Expérience " : "Experience"}
       </h2>
 

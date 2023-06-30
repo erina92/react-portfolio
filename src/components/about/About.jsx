@@ -10,6 +10,7 @@ const About = () => {
   return (
     <section className="about container section" id="about">
       <h2 className="section__title">
+        <span className="about-slash">&#47;</span>
         {isItalian ? "Chi sono" : isFrench ? "Mieux me connaître" : "About Me"}
       </h2>
 

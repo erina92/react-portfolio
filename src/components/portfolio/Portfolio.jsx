@@ -13,11 +13,47 @@ import Cert4 from "../../assets/responsive.png";
 import Cert5 from "../../assets/react-2.png";
 import Cert6 from "../../assets/reactaddon.png";
 import Cert7 from "../../assets/next.png";
+import Cloud1 from "../../assets/cloud literacy cert.png";
+import Cloud2 from "../../assets/cloud career cert.png";
+import Cloud3 from "../../assets/cloud computing for business.png";
+import Cloud4 from "../../assets/public cloud platforms.png";
 
 const Portfolio = () => {
   const [showCertifications, setShowCertifications] = useState(false);
   const [showLinguisticCert, setShowLinguisticCert] = useState(false);
+  const [showAccentureCert, setShowAccentureCert] = useState(false);
   const { isItalian, isFrench } = useContext(LanguageContext);
+
+  const AccentureCert = [
+    {
+      id: 1,
+      image: Cloud1,
+      title: "Cloud Computing",
+      category: "Accenture Cloud Bootcamp",
+      url: "https://certificates.cloudacademy.com/079adc1b8ab0c9d6426d54ad3aa4116295bd2669.pdf",
+    },
+    {
+      id: 2,
+      image: Cloud2,
+      title: "Cloud Computing",
+      category: "Accenture Cloud Bootcamp",
+      url: "https://certificates.cloudacademy.com/1d5a56d53f9f7d7a249965e9db1c09c75cc4fcc9.pdf",
+    },
+    {
+      id: 3,
+      image: Cloud3,
+      title: "Cloud Computing",
+      category: "Accenture Cloud Bootcamp",
+      url: "https://certificates.cloudacademy.com/4bb02e27cdef0e8addd4d7f6e1a020ba22eed282.pdf",
+    },
+    {
+      id: 4,
+      image: Cloud4,
+      title: "Cloud Computing",
+      category: "Accenture Cloud Bootcamp",
+      url: "https://certificates.cloudacademy.com/a7650d7c901b77fafd0d3d2a83868dd2138ad09d.pdf",
+    },
+  ];
 
   const LinguisticCert = [
     {
@@ -160,21 +196,31 @@ const Portfolio = () => {
   const handleCertificationsClick = () => {
     setShowCertifications(true);
     setShowLinguisticCert(false);
+    setShowAccentureCert(false);
   };
 
   const handleLinguisticCertClick = () => {
     setShowCertifications(false);
+    setShowAccentureCert(false);
     setShowLinguisticCert(true);
   };
 
   const handleWebDevProjectsClick = () => {
     setShowCertifications(false);
     setShowLinguisticCert(false);
+    setShowAccentureCert(false);
+  };
+
+  const handleAccentureCloudBootClick = () => {
+    setShowCertifications(false);
+    setShowLinguisticCert(false);
+    setShowAccentureCert(true);
   };
 
   return (
     <section className="work container section" id="portfolio">
       <h2 className="section__title">
+        <span className="work-slash">&#47;</span>
         {isItalian
           ? "Progetti Open-Source"
           : isFrench
@@ -203,6 +249,9 @@ const Portfolio = () => {
             : isFrench
             ? "Certifications linguistiques"
             : "Linguistic Certifications"}
+        </span>
+        <span className="work__item" onClick={handleAccentureCloudBootClick}>
+          Accenture Cloud Bootcamp
         </span>
       </div>
 
@@ -233,6 +282,29 @@ const Portfolio = () => {
           : showLinguisticCert
           ? LinguisticCert.map((lingCert) => {
               const { id, image, title, category, url } = lingCert;
+              return (
+                <div className="work__card" key={id}>
+                  <div className="work__thumbnail">
+                    <img src={image} alt="" className="work__img" />
+                    <div className="work__mask"></div>
+                  </div>
+
+                  <span className="work__category">{category}</span>
+                  <h3 className="work__title">{title}</h3>
+                  <a
+                    href={url}
+                    className="work__button"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="icon-link work__button-icon"></i>
+                  </a>
+                </div>
+              );
+            })
+          : showAccentureCert
+          ? AccentureCert.map((AccCert) => {
+              const { id, image, title, category, url } = AccCert;
               return (
                 <div className="work__card" key={id}>
                   <div className="work__thumbnail">

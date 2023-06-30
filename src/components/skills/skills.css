@@ -11,6 +11,10 @@
   margin-bottom: 2.5rem;
 }
 
+.skill-slash {
+  color: #cb70aa;
+}
+
 .skill__item {
   font-weight: var(--font-bold);
 }
@@ -37,10 +41,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .skills__container {
-    grid-template-columns: repeat(4, 70px);
-  }
-
   .skills__card {
     padding: 0.5rem;
   }

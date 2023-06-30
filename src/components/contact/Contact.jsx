@@ -32,6 +32,7 @@ const Contact = () => {
   return (
     <section className="contact container section" id="contact">
       <h2 className="section__title">
+        <span className="contact-slash">&#47;</span>
         {isItalian
           ? "Contattami"
           : isFrench

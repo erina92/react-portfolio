@@ -9,6 +9,10 @@
   margin-bottom: 2.5rem;
 }
 
+.music-slash {
+  color: #cb70aa;
+}
+
 .music__item {
   font-weight: var(--font-bold);
 }
@@ -35,7 +39,6 @@ iframe {
 
 @media screen and (max-width: 768px) {
   .music__container {
-    grid-template-columns: 1fr 1fr;
     justify-content: center;
   }
 

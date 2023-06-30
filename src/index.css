@@ -144,6 +144,14 @@ body.dark-mode {
   box-shadow: 0px 5px 30px 10px rgba(196, 167, 231, 0.7);
 }
 
+.dark-mode .home-city:visited {
+  color: white;
+}
+
+.dark-mode .home-city:hover {
+  color: rgb(196, 167, 231);
+}
+
 .dark-mode .socials__link {
   color: hsl(248, 49%, 91%);
 }

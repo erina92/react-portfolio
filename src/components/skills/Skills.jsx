@@ -21,6 +21,7 @@ const Skills = () => {
   return (
     <section className="skills container section" id="skills">
       <h2 className="section__title">
+        <span className="skill-slash">&#47;</span>
         {isItalian ? "Competenze" : isFrench ? "Compétences" : "Skills"}
       </h2>
       <div className="skill__filters">

@@ -7,6 +7,7 @@ const Music = () => {
   return (
     <section className="music container section" id="music">
       <h2 className="section__title">
+        <span className="music-slash">&#47;</span>
         {isItalian
           ? "Codici e Note"
           : isFrench

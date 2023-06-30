@@ -5,6 +5,10 @@
   margin-bottom: 2.5rem;
 }
 
+.work-slash {
+  color: #cb70aa;
+}
+
 .work__item {
   cursor: pointer;
   font-weight: var(--font-bold);
@@ -117,6 +121,14 @@
     row-gap: 1rem;
   }
   .work__container {
-    grid-template-columns: 300px;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9375rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .work__container {
+    grid-template-columns: 1fr;
+    padding: 20px;
   }
 }

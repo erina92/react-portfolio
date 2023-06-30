@@ -32,6 +32,22 @@
   margin-bottom: 0.5rem;
 }
 
+.brace {
+  color: #f6c177;
+}
+
+.slash {
+  color: #9ccfd8;
+}
+
+.home-city:visited {
+  color: black;
+}
+
+.home-city:hover {
+  color: var(--first-color);
+}
+
 .home__socials {
   display: flex;
   column-gap: 5rem;

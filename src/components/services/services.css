@@ -11,6 +11,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+.services-slash {
+  color: #cb70aa;
+}
+
 .services__card:hover {
   transform: translateY(-10px);
 }
@@ -50,7 +54,7 @@
   color: hsl(249, 23%, 12%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .services__container {
     grid-template-columns: 350px;
     row-gap: 1.875rem;
@@ -60,7 +64,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .services__container {
-    grid-template-columns: 500px;
+    grid-template-columns: 700px;
     row-gap: 1.875rem;
     justify-content: center;
   }

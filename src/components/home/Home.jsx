@@ -13,7 +13,11 @@ const Home = () => {
     <section className="home container" id="home">
       <div className="intro">
         <img src={Me} alt="" className="home__img" />
-        <h1 className="home__name">Erika Miglietta</h1>
+        <h1 className="home__name">
+          <span className="brace">&#60;</span>
+          <span className="slash">&#47;</span>Erika Miglietta
+          <span className="brace">&#62;</span>
+        </h1>
         <span className="home__education">
           {isItalian
             ? "Sono una traduttrice e una sviluppatrice Front-End"
@@ -22,7 +26,17 @@ const Home = () => {
             : "I am a Translator and a Front-End Developer"}
         </span>
         <br />
-        <span className="home__location">📍Taranto, Puglia, Italy</span>
+        <span className="home__location">
+          <a
+            href="https://www.google.it/maps/place/Taranto+TA/@40.4391673,17.1679316,12z/data=!3m1!4b1!4m6!3m5!1s0x13471d1819a77b13:0x64f8f9a58d57dfcf!8m2!3d40.4643606!4d17.2470303!16zL20vMGZrYnk?entry=ttu"
+            target="blank"
+            rel="nonreferrer"
+            title="Taranto"
+            className="home-city"
+          >
+            📍Taranto, Puglia, Italy
+          </a>
+        </span>
 
         <HeaderSocials />
 
