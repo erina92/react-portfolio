@@ -4,19 +4,20 @@ import "./portfolio.css";
 import Work1 from "../../assets/work-10.svg";
 import Work2 from "../../assets/work-11.svg";
 import Work3 from "../../assets/work-12.svg";
-import EF from "../../assets/EF.png";
-import EFCert from "../../assets/EF.pdf";
-import Cert1 from "../../assets/basics.png";
-import Cert2 from "../../assets/basicsaddon.png";
-import Cert3 from "../../assets/plus.png";
-import Cert4 from "../../assets/responsive.png";
-import Cert5 from "../../assets/react-2.png";
-import Cert6 from "../../assets/reactaddon.png";
-import Cert7 from "../../assets/next.png";
-import Cloud1 from "../../assets/cloud literacy cert.png";
-import Cloud2 from "../../assets/cloud career cert.png";
-import Cloud3 from "../../assets/cloud computing for business.png";
-import Cloud4 from "../../assets/public cloud platforms.png";
+import EF from "../../assets/EF/EF.png";
+import EFCert from "../../assets/EF/EF.pdf";
+import Cert1 from "../../assets/SheCodes/basics.png";
+import Cert2 from "../../assets/SheCodes/basicsaddon.png";
+import Cert3 from "../../assets/SheCodes/plus.png";
+import Cert4 from "../../assets/SheCodes/responsive.png";
+import Cert5 from "../../assets/SheCodes/react-2.png";
+import Cert6 from "../../assets/SheCodes/reactaddon.png";
+import Cert7 from "../../assets/SheCodes/next.png";
+import Cloud1 from "../../assets/Accenture/cloud literacy cert.png";
+import Cloud2 from "../../assets/Accenture/cloud career cert.png";
+import Cloud3 from "../../assets/Accenture/cloud computing for business.png";
+import Cloud4 from "../../assets/Accenture/public cloud platforms.png";
+import Cloud5 from "../../assets/Accenture/digital transformation.png";
 
 const Portfolio = () => {
   const [showCertifications, setShowCertifications] = useState(false);
@@ -52,6 +53,13 @@ const Portfolio = () => {
       title: "Cloud Computing",
       category: "Accenture Cloud Bootcamp",
       url: "https://certificates.cloudacademy.com/a7650d7c901b77fafd0d3d2a83868dd2138ad09d.pdf",
+    },
+    {
+      id: 5,
+      image: Cloud5,
+      title: "Cloud Computing",
+      category: "Accenture Cloud Bootcamp",
+      url: "https://certificates.cloudacademy.com/5559a3c7bb4b0ea376cce6a7758917c3b5c5449d.pdf",
     },
   ];
 

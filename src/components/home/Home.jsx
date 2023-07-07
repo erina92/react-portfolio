@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./home.css";
-import Me from "../../assets/profile-pic.png";
+import Me from "../../assets/profile/profile-pic.png";
 import HeaderSocials from "./HeaderSocials";
 import ScrollDown from "./ScrollDown";
 import Shapes from "./Shapes";

@@ -37,7 +37,12 @@ const Skills = () => {
       <div className="skills__container grid">
         <div className="skills__card">
           <header className="skill-card__header">
-            <img src={HTML} alt="HTML" className="skill-card__icon" />
+            <img
+              src={HTML}
+              alt="HTML"
+              className="skill-card__icon"
+              title="HTML"
+            />
           </header>
         </div>
         <div className="skills__card">
@@ -47,7 +52,12 @@ const Skills = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={CSS} alt="CSS" className="skill-card__icon" />
+              <img
+                src={CSS}
+                alt="CSS"
+                className="skill-card__icon"
+                title="CSS"
+              />
             </a>
           </header>
         </div>
@@ -58,28 +68,48 @@ const Skills = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={Javascript} alt="JS" className="skill-card__icon" />
+              <img
+                src={Javascript}
+                alt="JS"
+                className="skill-card__icon"
+                title="Javascript"
+              />
             </a>
           </header>
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
             <a href="https://react.dev/" target="_blank" rel="noreferrer">
-              <img src={ReactLogo} alt="React" className="skill-card__icon" />
+              <img
+                src={ReactLogo}
+                alt="React"
+                className="skill-card__icon"
+                title="React"
+              />
             </a>
           </header>
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
             <a href="https://www.npmjs.com/" target="_blank" rel="noreferrer">
-              <img src={Npm} alt="Npm" className="skill-card__icon" />
+              <img
+                src={Npm}
+                alt="Npm"
+                className="skill-card__icon"
+                title="Npm"
+              />
             </a>
           </header>
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
             <a href="https://nodejs.org/en" target="_blank" rel="noreferrer">
-              <img src={Nodejs} alt="Nodejs" className="skill-card__icon" />
+              <img
+                src={Nodejs}
+                alt="Nodejs"
+                className="skill-card__icon"
+                title="Nodejs"
+              />
             </a>
           </header>
         </div>
@@ -90,14 +120,24 @@ const Skills = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={VSCode} alt="VSCode" className="skill-card__icon" />
+              <img
+                src={VSCode}
+                alt="VSCode"
+                className="skill-card__icon"
+                title="Microsoft Visual Studio"
+              />
             </a>
           </header>
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
             <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-              <img src={GitLogo} alt="Git" className="skill-card__icon" />
+              <img
+                src={GitLogo}
+                alt="Git"
+                className="skill-card__icon"
+                title="Git"
+              />
             </a>
           </header>
         </div>
@@ -108,7 +148,12 @@ const Skills = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={Github} alt="Github" className="skill-card__icon" />
+              <img
+                src={Github}
+                alt="Github"
+                className="skill-card__icon"
+                title="Github"
+              />
             </a>
           </header>
         </div>
@@ -119,7 +164,12 @@ const Skills = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={Slack} alt="Slack" className="skill-card__icon" />
+              <img
+                src={Slack}
+                alt="Slack"
+                className="skill-card__icon"
+                title="Slack"
+              />
             </a>
           </header>
         </div>
@@ -130,6 +180,7 @@ const Skills = () => {
                 src={NetlifyLogo}
                 alt="Netlify"
                 className="skill-card__icon"
+                title="Netlify"
               />
             </a>
           </header>
@@ -145,6 +196,7 @@ const Skills = () => {
                 src={BootStrap}
                 alt="BootStrap"
                 className="skill-card__icon"
+                title="BootStrap"
               />
             </a>
           </header>
@@ -152,7 +204,12 @@ const Skills = () => {
         <div className="skills__card">
           <header className="skill-card__header">
             <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
-              <img src={FigmaLogo} alt="Figma" className="skill-card__icon" />
+              <img
+                src={FigmaLogo}
+                alt="Figma"
+                className="skill-card__icon"
+                title="Figma"
+              />
             </a>
           </header>
         </div>
@@ -163,7 +220,12 @@ const Skills = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img src={Paintnet} alt="Paintnet" className="skill-card__icon" />
+              <img
+                src={Paintnet}
+                alt="Paintnet"
+                className="skill-card__icon"
+                title="Paintnet"
+              />
             </a>
           </header>
         </div>
