@@ -24,19 +24,25 @@ const About = () => {
                 ? "Mi chiamo Erika e sono una traduttrice e di recente sviluppatrice web da Taranto, Puglia."
                 : isFrench
                 ? "Je suis Erika Miglietta, traductrice/interprète et développeuse web de Taranto, Italie."
-                : "I'm Erika Miglietta, a translator/interpreter and web developer from Taranto, Italy."}{" "}
+                : "My name is Erika, a translator and web developer from Taranto, Puglia."}{" "}
               <br />{" "}
               {isItalian
-                ? "Sono specializzata in JavaScript e React, creando applicazioni interattive che colmano il divario tra linguaggi e tecnologie."
+                ? "La mia passione per la logica dei linguaggi, sia umani che informatici, mi ha portato a specializzarmi in JavaScript e React."
                 : isFrench
-                ? "Je suis spécialisée en JavaScript et React, créant des applications interactives tout en jetant un pont entre les langues et les technologies"
-                : "I specialize in JavaScript and React, building interactive applications while bridging the gap between languages and technologies."}
+                ? "Ma passion pour la logique des langages, qu'ils soient humains ou informatiques, m'a amenée à me spécialiser en JavaScript et React."
+                : "My passion for the logic of languages—both human and computer—led me to specialize in JavaScript and React."}
               <br />
               {isItalian
-                ? "Sono una videogiocatrice sin da quando ero piccola. Aspetto con ansia il nuovo Spider-Man 2 per PS5. Amo leggere manga e guardare anime."
+                ? "Dalla fine del 2024, lavoro come Infra Transformation Analyst in Accenture, dove gestisco e mi interfaccio quotidianamente con le principali console cloud, tra cui Google Cloud, Oracle, Azure e Alibaba. Questa esperienza ha ampliato le mie competenze tecniche, permettendomi di operare all'intersezione tra lo sviluppo software e le infrastrutture cloud all'avanguardia."
                 : isFrench
-                ? "Je suis une joueuse de jeux vidéo depuis que je suis petite. J'attends avec impatience le nouveau Spider-Man 2 pour PS5. J'adore lire des mangas et regarder des animes."
-                : "I have been a gamer since I was little. I'm eagerly awaiting the new Spider-Man 2 for PS5. I love reading manga and watching anime."}
+                ? "Depuis fin 2024, je travaille en tant qu'Analyste en Transformation d'Infrastructure chez Accenture, où je gère et interagis quotidiennement avec les principales consoles cloud, notamment Google Cloud, Oracle, Azure et Alibaba. Ce rôle a élargi mes compétences techniques, me permettant d'opérer à l'intersection du développement logiciel et des infrastructures cloud de pointe."
+                : "Since late 2024, I have been working as an Infra Transformation Analyst at Accenture, where I manage and interface daily with major cloud consoles, including Google Cloud, Oracle, Azure, and Alibaba. This role has broadened my technical skills, allowing me to operate at the intersection of software development and cutting-edge cloud infrastructure."}
+              {isItalian
+                ? "Nel mio tempo libero, sono una videogiocatrice da sempre e amo immergermi nel mondo dei manga e degli anime."
+                : isFrench
+                ? "Pendant mon temps libre, je suis une joueuse de jeux vidéo depuis toujours et j'adore me plonger dans l'univers des mangas et des animes."
+                : "In my free time, I am a lifelong gamer and love to immerse myself in the world of manga and anime."}
+              <br />
             </p>
             <a
               href={ResumeUrl}
