@@ -20,10 +20,22 @@ const Home = () => {
         </h1>
         <span className="home__education">
           {isItalian
-            ? "Sono una traduttrice e una sviluppatrice Front-End, Infra Transformation Analyst in Accenture dal 2024"
+            ? [
+                "Sono una traduttrice e una sviluppatrice Front-End",
+                <br />,
+                "Infra Transformation Analyst in Accenture dal 2024",
+              ]
             : isFrench
-            ? "Je suis traductrice et développeuse Front-End, Infra Transformation Analyst in Accenture depuis 2024"
-            : "I am a Translator and a Front-End Developer, Infra Transformation Analyst in Accenture since 2024"}
+            ? [
+                "Je suis traductrice et développeuse Front-End",
+                <br />,
+                "Infra Transformation Analyst in Accenture depuis 2024",
+              ]
+            : [
+                "I am a Translator and a Front-End Developer",
+                <br />,
+                "Infra Transformation Analyst in Accenture since 2024",
+              ]}
         </span>
         <br />
         <span className="home__location">
