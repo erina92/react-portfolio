@@ -1,41 +1,64 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useRef, useState, useEffect } from "react";
 import "./contact.css";
 import LanguageContext from "../language/LanguageContext";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
   const [message, setMessage] = useState("");
   const { isItalian, isFrench } = useContext(LanguageContext);
 
+  useEffect(() => {
+    // Initialize EmailJS with your public key (replace the placeholder below)
+    // Get your PUBLIC KEY from EmailJS dashboard -> Integration
+    // Example: emailjs.init('your_public_key_here');
+    // Do NOT commit your real key to the repository. Replace locally or in CI.
+    try {
+      emailjs.init("cNSIlVWEWDInmdpbi");
+    } catch (err) {
+      // emailjs.init may throw in some environments; ignore here
+      // you'll still need to pass the public key when calling sendForm if required
+      console.warn("EmailJS init skipped or failed:", err);
+    }
+  }, []);
+
   const sendEmail = async (e) => {
     e.preventDefault();
+    setMessage("Sending...");
 
-    // Post to Netlify Function which will send via SendGrid.
-    // Requires these Netlify env vars: SENDGRID_API_KEY and TO_EMAIL.
-    const url = '/.netlify/functions/send-email';
-    const formData = new FormData(e.target);
-
-    const payload = {};
-    formData.forEach((v, k) => (payload[k] = v));
+  // EmailJS Service and Template IDs provided by the user.
+  const SERVICE_ID = "service_tzdyrzd";
+  const TEMPLATE_ID = "template_uey931b";
 
     try {
-      const resp = await fetch(url, {
-        method: 'POST',
-        body: JSON.stringify(payload),
-        headers: { 'Content-Type': 'application/json' },
-      });
-
-      const data = await resp.json();
-      if (resp.ok) {
-        setMessage('Email sent successfully!');
-        e.target.reset();
-      } else {
-        setMessage('Error sending email: ' + (data.error || resp.statusText));
-        console.error('Send function error', data);
+      // ensure hidden fields are set (site_origin and time)
+      const formEl = form.current;
+      if (formEl) {
+        const originInput = formEl.querySelector("input[name=site_origin]");
+        if (originInput) originInput.value = window.location.href;
+        const timeInput = formEl.querySelector("input[name=time]");
+        if (timeInput) timeInput.value = new Date().toLocaleString();
       }
+
+      const result = await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current);
+      console.log("EmailJS result", result);
+      setMessage(
+        isItalian
+          ? "Email inviata con successo!"
+          : isFrench
+          ? "E-mail envoyée avec succès!"
+          : "Email sent successfully!"
+      );
+      form.current.reset();
     } catch (err) {
-      console.error('Send function fetch error', err);
-      setMessage('Error sending email: ' + err.message);
+      console.error("EmailJS error:", err);
+      setMessage(
+        isItalian
+          ? "Errore durante l'invio. Controlla la console e le impostazioni EmailJS."
+          : isFrench
+          ? "Erreur lors de l'envoi. Vérifiez la console et les paramètres EmailJS."
+          : "Error sending email. Check console and EmailJS settings."
+      );
     }
   };
 
@@ -131,7 +154,11 @@ const Contact = () => {
             ></textarea>
           </div>
 
-          <button className="btn">
+            {/* hidden fields to send extra info to EmailJS template */}
+            <input type="hidden" name="site_origin" value="" />
+            <input type="hidden" name="time" value="" />
+
+            <button className="btn">
             {isItalian
               ? "Invia Messaggio"
               : isFrench
