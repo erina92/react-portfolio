@@ -35,8 +35,32 @@
   box-shadow: 0px 5px 20px 0px rgba(156, 207, 216, 0.7);
 }
 
+/* Ensure the 4th card in the cloud container matches the first cloud card color */
+.services__container.services__cloud .services__card:nth-child(4) {
+  background-color: rgba(196, 167, 231);
+  box-shadow: 0px 5px 20px 0px rgba(196, 167, 231, 0.7);
+}
+
 .services__img {
   margin-bottom: 1.25rem;
+  /* Normalize service images (SVGs can be large). Matches grid sizing used elsewhere */
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+
+/* Spacing for cloud/infrastructure container added after the main services */
+.services__container.services__cloud {
+  margin-top: 2.5rem; /* space above the cloud grid */
+  row-gap: 2rem; /* vertical spacing between rows */
+}
+
+/* Extra bottom spacing to avoid crowding near the following sections */
+.services__container.services__cloud + * {
+  margin-top: 1.5rem;
 }
 
 .services__title {
@@ -59,6 +83,13 @@
     grid-template-columns: 350px;
     row-gap: 1.875rem;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .services__container.services__cloud {
+    margin-top: 1.5rem;
+    row-gap: 1.25rem;
   }
 }
 

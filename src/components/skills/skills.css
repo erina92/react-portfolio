@@ -4,6 +4,15 @@
   row-gap: 1.875rem;
 }
 
+/* Ensure skill icons display at a consistent size and remain contained */
+.skill-card__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
 .skill__filters {
   display: flex;
   align-items: center;

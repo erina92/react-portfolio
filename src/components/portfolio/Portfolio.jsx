@@ -13,6 +13,8 @@ import Cert4 from "../../assets/SheCodes/responsive.png";
 import Cert5 from "../../assets/SheCodes/react-2.png";
 import Cert6 from "../../assets/SheCodes/reactaddon.png";
 import Cert7 from "../../assets/SheCodes/next.png";
+import OracleCert from "../../assets/oracle-cert.jpg";
+import CommvaultCert from "../../assets/commvault-cert.jpg";
 import Cloud1 from "../../assets/Accenture/cloud literacy cert.png";
 import Cloud2 from "../../assets/Accenture/cloud career cert.png";
 import Cloud3 from "../../assets/Accenture/cloud computing for business.png";
@@ -152,6 +154,28 @@ const Portfolio = () => {
         ? "Certifications"
         : "Certifications",
       url: "https://www.shecodes.io/certificates/009e6b3334c2a297b3962f2f96d2c646",
+    },
+    {
+      id: 8,
+      image: OracleCert,
+      title: "Oracle Certified Foundation Associate Certification",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=F4F9B877D10A1A8C148698A9BFCCBB47537E6070E5F1157A5B720C430A271AB2",
+    },
+    {
+      id: 9,
+      image: CommvaultCert,
+      title: "Commvault Certified Professional Certification",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: "https://www.credly.com/badges/3fb81ca6-e2ac-4fdc-a5c7-7d3281d88c05/public_url",
     },
   ];
   const Menu = [

@@ -92,6 +92,22 @@
   background-color: hsl(35deg, 88%, 72%);
 }
 
+/* Cloud provider skill colors and default width */
+.gcp {
+  width: 30%;
+  background-color: #4285f4; /* Google blue */
+}
+
+.oracle {
+  width: 30%;
+  background-color: #ea1b22; /* Oracle red (matches logo fill) */
+}
+
+.alibaba {
+  width: 30%;
+  background-color: #ed6b1e; /* Alibaba orange (matches svg) */
+}
+
 .about__boxes {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 1.97rem;

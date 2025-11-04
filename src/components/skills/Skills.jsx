@@ -13,6 +13,10 @@ import Slack from "../../assets/slack-logo.png";
 import NetlifyLogo from "../../assets/netlify.svg";
 import Nodejs from "../../assets/nodejs.png";
 import Paintnet from "../../assets/paint.png";
+import GoogleCloud from "../../assets/google-cloud.svg";
+import OracleCloud from "../../assets/oracle-cloud.svg";
+import AzureCloud from "../../assets/azure-cloud.svg";
+import AlibabaCloud from "../../assets/alibaba-cloud.svg";
 import LanguageContext from "../../components/language/LanguageContext";
 import "./skills.css";
 
@@ -45,6 +49,7 @@ const Skills = () => {
             />
           </header>
         </div>
+        
         <div className="skills__card">
           <header className="skill-card__header">
             <a
@@ -225,6 +230,54 @@ const Skills = () => {
                 alt="Paintnet"
                 className="skill-card__icon"
                 title="Paintnet"
+              />
+            </a>
+          </header>
+        </div>
+        <div className="skills__card">
+          <header className="skill-card__header">
+            <a href="https://cloud.google.com/" target="_blank" rel="noreferrer">
+              <img
+                src={GoogleCloud}
+                alt="Google Cloud"
+                className="skill-card__icon"
+                title="Google Cloud"
+              />
+            </a>
+          </header>
+        </div>
+        <div className="skills__card">
+          <header className="skill-card__header">
+            <a href="https://www.oracle.com/cloud/" target="_blank" rel="noreferrer">
+              <img
+                src={OracleCloud}
+                alt="Oracle Cloud"
+                className="skill-card__icon"
+                title="Oracle Cloud"
+              />
+            </a>
+          </header>
+        </div>
+        <div className="skills__card">
+          <header className="skill-card__header">
+            <a href="https://azure.microsoft.com/" target="_blank" rel="noreferrer">
+              <img
+                src={AzureCloud}
+                alt="Azure"
+                className="skill-card__icon"
+                title="Azure"
+              />
+            </a>
+          </header>
+        </div>
+        <div className="skills__card">
+          <header className="skill-card__header">
+            <a href="https://www.alibabacloud.com/" target="_blank" rel="noreferrer">
+              <img
+                src={AlibabaCloud}
+                alt="Alibaba Cloud"
+                className="skill-card__icon"
+                title="Alibaba Cloud"
               />
             </a>
           </header>

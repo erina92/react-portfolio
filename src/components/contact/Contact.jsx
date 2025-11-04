@@ -1,5 +1,4 @@
 import React, { useContext, useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import "./contact.css";
 import LanguageContext from "../language/LanguageContext";
 
@@ -8,25 +7,37 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const { isItalian, isFrench } = useContext(LanguageContext);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_tzdyrzd",
-        "template_xt7yofd",
-        form.current,
-        "cNSIlVWEWDInmdpbi"
-      )
-      .then(
-        (result) => {
-          setMessage("Email sent successfully!");
+  // Using FormSubmit (https://formsubmit.co/) as a no-account-needed alternative.
+  // This is your address to receive messages.
+  const formSubmitAddress = "erikamiglietta92@gmail.com";
+
+    const url = `https://formsubmit.co/ajax/${formSubmitAddress}`;
+    const formData = new FormData(e.target);
+
+    try {
+      const resp = await fetch(url, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
         },
-        (error) => {
-          setMessage("Error sending email!");
-        }
-      );
-    e.target.reset();
+      });
+
+      const data = await resp.json();
+      if (resp.ok) {
+        setMessage("Email sent successfully! Please check your inbox to confirm the address for FormSubmit.");
+        e.target.reset();
+      } else {
+        setMessage("Error sending email: " + (data.message || resp.statusText));
+        console.error("FormSubmit response error:", data);
+      }
+    } catch (err) {
+      console.error("FormSubmit fetch error", err);
+      setMessage("Error sending email: " + err.message);
+    }
   };
 
   return (

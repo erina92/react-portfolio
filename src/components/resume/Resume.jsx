@@ -52,6 +52,18 @@ const Resume = () => {
       institution: "University of Bari Aldo Moro",
     },
     {
+      id: 9,
+      category: "experience",
+      icon: "fa-solid fa-briefcase",
+      year: "2024 - present",
+      title: isItalian
+        ? "Infra Transformation Analyst"
+        : isFrench
+        ? "Infra Transformation Analyst"
+        : "Infra Transformation Analyst",
+      institution: "Accenture",
+    },
+    {
       id: 5,
       category: "experience",
       icon: "fa-solid fa-briefcase",

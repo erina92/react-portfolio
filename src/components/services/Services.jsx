@@ -4,6 +4,10 @@ import Image1 from "../../assets/service-1.svg";
 import Image2 from "../../assets/service-2.svg";
 import Image3 from "../../assets/service-4.svg";
 import LanguageContext from "../../components/language/LanguageContext";
+import GoogleCloud from "../../assets/google-cloud.svg";
+import OracleCloud from "../../assets/oracle-cloud.svg";
+import AzureCloud from "../../assets/azure-cloud.svg";
+import AlibabaCloud from "../../assets/alibaba-cloud.svg";
 
 const Services = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
@@ -17,10 +21,10 @@ const Services = () => {
         ? "Design UI/UX"
         : "UI/UX design",
       description: isItalian
-        ? "Il mio servizio di design UI/UX mira a creare interfacce utente intuitive e visivamente accattivanti che migliorano l'esperienza dell'utente, sfruttando i moderni principi di design per far risaltare i tuoi siti web e applicazioni nel panorama digitale."
+        ? "Creo interfacce intuitive e visivamente efficaci per migliorare l'esperienza utente."
         : isFrench
-        ? "Mon service de design UI/UX vise à créer des interfaces utilisateur intuitives et visuellement attrayantes qui améliorent l'expérience utilisateur, en utilisant les principes de design modernes pour aider vos sites web et applications à se démarquer dans le paysage numérique."
-        : "My UI/UX design service aims to create intuitive and visually appealing user interfaces that enhance the user experience, leveraging modern design principles to help your websites and applications stand out in the digital landscape.",
+        ? "Je crée des interfaces intuitives et visuellement efficaces pour améliorer l'expérience utilisateur."
+        : "I create intuitive, visually effective interfaces that improve the user experience.",
     },
     {
       id: 2,
@@ -31,20 +35,20 @@ const Services = () => {
         ? "Développement Web"
         : "Web Development",
       description: isItalian
-        ? "Come principiante nello sviluppo web, il mio servizio si concentra sulla creazione di siti web semplici e moderni che mettono in mostra il mio lavoro e le mie competenze, offrendo una presenza online per aiutarti a stabilire credibilità e attrarre potenziali clienti."
+        ? "Realizzo siti web semplici e moderni per mostrare il lavoro e creare una presenza online."
         : isFrench
-        ? "En tant que nouvel arrivant dans le développement web, mon service se concentre sur la création de sites web simples et modernes qui mettent en valeur mon travail et mes compétences, offrant une présence en ligne pour vous aider à établir votre crédibilité et attirer des clients potentiels."
-        : "As a newcomer in web development, my service focuses on creating simple and modern websites that showcase my work and skills, providing an online presence to help you establish credibility and attract potential clients.",
+        ? "Je crée des sites web simples et modernes pour présenter le travail et établir une présence en ligne."
+        : "I build simple, modern websites to showcase work and establish an online presence.",
     },
     {
       id: 3,
       image: Image3,
       title: isItalian ? "Traduzione" : isFrench ? "Traduction" : "Translation",
       description: isItalian
-        ? "Attingendo alla mia precedente esperienza e competenza, il mio servizio di traduzione offre traduzioni accurate e culturalmente sensibili per superare le barriere linguistiche e trasmettere efficacemente il tuo messaggio a un pubblico diversificato."
+        ? "Forniamo traduzioni accurate e culturalmente appropriate per superare le barriere linguistiche."
         : isFrench
-        ? "S'appuyant sur mon expérience et mon expertise précédentes, mon service de traduction offre des traductions précises et culturellement sensibles pour surmonter les barrières linguistiques et transmettre efficacement votre message à des publics diversifiés."
-        : "Drawing on my previous experience and expertise, my translation service provides accurate and culturally sensitive translations to bridge language barriers and effectively convey your message to diverse audiences.",
+        ? "Nous fournissons des traductions précises et culturellement appropriées pour surmonter les barrières linguistiques."
+        : "I provide accurate, culturally appropriate translations to bridge language barriers.",
     },
   ];
   return (
@@ -65,6 +69,60 @@ const Services = () => {
             </div>
           );
         })}
+      </div>
+
+      {/* Cloud / Infrastructure section */}
+      {/* Cloud & Infrastructure subtitle removed per request (was localized intro text) */}
+
+      <div className="services__container grid services__cloud">
+        {[
+          {
+            id: "gcp",
+            image: GoogleCloud,
+            title: "Google Cloud",
+            description: isItalian
+              ? "Migrazioni di workload verso GCP, infrastruttura come codice (Terraform), monitoraggio e ottimizzazione dei costi."
+              : isFrench
+              ? "Migrations de charges de travail vers GCP, infrastructure as code (Terraform), supervision et optimisation des coûts."
+              : "Workload migrations to GCP, IaC (Terraform), monitoring and cost optimization.",
+          },
+          {
+            id: "oracle",
+            image: OracleCloud,
+            title: "Oracle Cloud",
+            description: isItalian
+              ? "Supporto alla modernizzazione di applicazioni e dati su Oracle Cloud e automazione delle pipeline di deployment."
+              : isFrench
+              ? "Support à la modernisation des applications et des données sur Oracle Cloud et automatisation des pipelines de déploiement."
+              : "Support for application and data modernization on Oracle Cloud and automation of deployment pipelines.",
+          },
+          {
+            id: "azure",
+            image: AzureCloud,
+            title: "Microsoft Azure",
+            description: isItalian
+              ? "Adozione di servizi PaaS, infrastrutture ibride e pratiche di sicurezza cloud su Azure."
+              : isFrench
+              ? "Adoption des services PaaS, infrastructures hybrides et pratiques de sécurité cloud sur Azure."
+              : "Adoption of PaaS services, hybrid infrastructures and cloud security practices on Azure.",
+          },
+          {
+            id: "alibaba",
+            image: AlibabaCloud,
+            title: "Alibaba Cloud",
+            description: isItalian
+              ? "Migrazioni e configurazioni per scenari APAC, automazione e ottimizzazione delle risorse su Alibaba Cloud."
+              : isFrench
+              ? "Migrations et configurations pour des scénarios APAC, automatisation et optimisation des ressources sur Alibaba Cloud."
+              : "Migrations and configurations for APAC scenarios, automation and resource optimization on Alibaba Cloud.",
+          },
+        ].map(({ id, image, title, description }) => (
+          <div className="services__card" key={id}>
+            <img src={image} alt={title} className="services__img" />
+            <h3 className="services__title">{title}</h3>
+            <p className="services__description">{description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

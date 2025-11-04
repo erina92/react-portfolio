@@ -113,6 +113,34 @@ const About = () => {
                 <span className="skills__percentage react"></span>
               </div>
             </div>
+            {/* Cloud provider skill bars */}
+            <div className="skills__data">
+              <div className="skills__titles">
+                <h3 className="skills__name">Google Cloud</h3>
+                <span className="skills__number">30%</span>
+              </div>
+              <div className="skills__bar">
+                <span className="skills__percentage gcp"></span>
+              </div>
+            </div>
+            <div className="skills__data">
+              <div className="skills__titles">
+                <h3 className="skills__name">Oracle Cloud</h3>
+                <span className="skills__number">30%</span>
+              </div>
+              <div className="skills__bar">
+                <span className="skills__percentage oracle"></span>
+              </div>
+            </div>
+            <div className="skills__data">
+              <div className="skills__titles">
+                <h3 className="skills__name">Alibaba Cloud</h3>
+                <span className="skills__number">30%</span>
+              </div>
+              <div className="skills__bar">
+                <span className="skills__percentage alibaba"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
