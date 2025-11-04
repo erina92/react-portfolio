@@ -10,33 +10,32 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-  // Using FormSubmit (https://formsubmit.co/) as a no-account-needed alternative.
-  // This is your address to receive messages.
-  const formSubmitAddress = "erikamiglietta92@gmail.com";
-
-    const url = `https://formsubmit.co/ajax/${formSubmitAddress}`;
+    // Post to Netlify Function which will send via SendGrid.
+    // Requires these Netlify env vars: SENDGRID_API_KEY and TO_EMAIL.
+    const url = '/.netlify/functions/send-email';
     const formData = new FormData(e.target);
+
+    const payload = {};
+    formData.forEach((v, k) => (payload[k] = v));
 
     try {
       const resp = await fetch(url, {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
+        method: 'POST',
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' },
       });
 
       const data = await resp.json();
       if (resp.ok) {
-        setMessage("Email sent successfully! Please check your inbox to confirm the address for FormSubmit.");
+        setMessage('Email sent successfully!');
         e.target.reset();
       } else {
-        setMessage("Error sending email: " + (data.message || resp.statusText));
-        console.error("FormSubmit response error:", data);
+        setMessage('Error sending email: ' + (data.error || resp.statusText));
+        console.error('Send function error', data);
       }
     } catch (err) {
-      console.error("FormSubmit fetch error", err);
-      setMessage("Error sending email: " + err.message);
+      console.error('Send function fetch error', err);
+      setMessage('Error sending email: ' + err.message);
     }
   };
 
