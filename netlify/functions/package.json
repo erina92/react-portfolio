@@ -1,0 +1,8 @@
+{
+  "name": "netlify-functions",
+  "version": "1.0.0",
+  "description": "Netlify Functions dependencies",
+  "dependencies": {
+    "psn-api": "^2.15.0"
+  }
+}
