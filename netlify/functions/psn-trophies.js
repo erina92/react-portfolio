@@ -70,6 +70,10 @@ exports.handler = async (event, context) => {
     );
 
     if (!matchedTitle) {
+      // Log available titles for debugging
+      console.log(`Could not find match for: ${gameTitle}`);
+      console.log('Available titles:', titlesResponse.trophyTitles.slice(0, 20).map(t => t.trophyTitleName));
+      
       // Game not found or no trophies available
       return {
         statusCode: 200,

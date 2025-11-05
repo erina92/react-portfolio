@@ -30,13 +30,13 @@ const Games = () => {
       {
         id: 3,
         image: ACMirage,
-        title: "Assassin's Creed Mirage",
+        title: "Assassin's Creed",
         url: "https://www.playstation.com/en-us/games/assassins-creed-mirage/",
       },
       {
         id: 4,
         image: GhostOfYotei,
-        title: "Ghost of Yotei",
+        title: "Ghost of Tsushima",
         url: "https://www.playstation.com/en-us/games/ghost-of-yotei/",
       },
       {
@@ -63,12 +63,20 @@ const Games = () => {
           const response = await fetch(
             `/api/psn-trophies?title=${encodeURIComponent(game.title)}`
           );
+          console.log(
+            `Trophy API response for ${game.title}:`,
+            response.status
+          );
           const data = await response.json();
-          if (data.trophies) results[game.title] = data.trophies;
+          console.log(`Trophy data for ${game.title}:`, data);
+          if (data.trophies) {
+            results[game.title] = data.trophies;
+          }
         } catch (error) {
           console.error(`Failed to fetch trophies for ${game.title}:`, error);
         }
       }
+      console.log("All trophy data:", results);
       setTrophyData(results);
       setLoading(false);
     };
@@ -115,19 +123,19 @@ const Games = () => {
                 ) : trophies ? (
                   <div className="games__trophies">
                     <div className="trophy__item">
-                      <span className="trophy__icon">P</span>
+                      <span className="trophy__icon platinum">🏆</span>
                       <span className="trophy__count">{trophies.platinum}</span>
                     </div>
                     <div className="trophy__item">
-                      <span className="trophy__icon">G</span>
+                      <span className="trophy__icon gold">🥇</span>
                       <span className="trophy__count">{trophies.gold}</span>
                     </div>
                     <div className="trophy__item">
-                      <span className="trophy__icon">S</span>
+                      <span className="trophy__icon silver">🥈</span>
                       <span className="trophy__count">{trophies.silver}</span>
                     </div>
                     <div className="trophy__item">
-                      <span className="trophy__icon">B</span>
+                      <span className="trophy__icon bronze">🥉</span>
                       <span className="trophy__count">{trophies.bronze}</span>
                     </div>
                   </div>
