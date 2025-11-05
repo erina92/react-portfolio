@@ -45,6 +45,15 @@
   margin-top: 0.75rem;
   font-size: var(--normal-font-size);
   padding: 0 0.5rem 0.5rem 0.5rem;
+  color: var(--title-color);
+}
+
+.dark-mode .games__title {
+  color: hsl(248, 49%, 91%);
+}
+
+.dark-mode .games__item {
+  color: hsl(248, 49%, 91%);
 }
 
 @media screen and (max-width: 1024px) {
