@@ -6,7 +6,7 @@ import LanguageContext from "../language/LanguageContext";
 
 const About = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
-  const ResumeUrl = "https://www.dropbox.com/s/4u1cx1vn0lqwme2/CV.pdf?dl=0";
+  const ResumeUrl = require("../../cv/Resume.pdf");
   return (
     <section className="about container section" id="about">
       <h2 className="section__title">
