@@ -2,7 +2,6 @@ const {
   exchangeNpssoForCode,
   exchangeCodeForAccessToken,
   getUserTitles,
-  getUserTrophiesEarnedForTitle,
 } = require("psn-api");
 
 // Cache trophy data for 24 hours to avoid rate limits
@@ -83,25 +82,14 @@ exports.handler = async (event, context) => {
       };
     }
 
-    // Step 3: Get trophy details for the matched title
-    const trophyData = await getUserTrophiesEarnedForTitle(
-      authorization,
-      "me",
-      matchedTitle.npCommunicationId,
-      matchedTitle.trophyTitlePlatform,
-      {
-        npServiceName:
-          matchedTitle.npServiceName === "trophy2" ? "trophy2" : "trophy",
-      }
-    );
-
-    // Parse trophy counts
+    // Step 3: Get trophy summary (not individual trophies)
+    // The earned trophy counts are already in the matchedTitle object
     const trophies = {
-      platinum: trophyData.earnedTrophies?.platinum || 0,
-      gold: trophyData.earnedTrophies?.gold || 0,
-      silver: trophyData.earnedTrophies?.silver || 0,
-      bronze: trophyData.earnedTrophies?.bronze || 0,
-      progress: trophyData.progress || 0,
+      platinum: matchedTitle.earnedTrophies?.platinum || 0,
+      gold: matchedTitle.earnedTrophies?.gold || 0,
+      silver: matchedTitle.earnedTrophies?.silver || 0,
+      bronze: matchedTitle.earnedTrophies?.bronze || 0,
+      progress: matchedTitle.progress || 0,
     };
 
     const result = {
