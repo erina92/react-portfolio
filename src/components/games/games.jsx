@@ -5,6 +5,12 @@ import ACMirage from "../../assets/games/ac-mirage.jpg";
 import GhostOfYotei from "../../assets/games/ghost-of-yotei.jpg";
 import AstroBot from "../../assets/games/astrobot.jpg";
 import HorizonForbiddenWest from "../../assets/games/horizonforbiddenwest.jpg";
+// Add your own images for these games in assets/games/ and update the imports below
+import FFXVI from "../../assets/games/final-fantasy-16.jpg"; // FINAL FANTASY XVI
+import Wukong from "../../assets/games/black-myth.jpg"; // Black Myth: Wukong
+import FFVIIR from "../../assets/games/final-fantasy-seven-rebirth.jpg"; // FINAL FANTASY VII REBIRTH
+import RDR2 from "../../assets/games/red-dead-two.jpeg"; // Red Dead Redemption 2
+import SpiderMan2 from "../../assets/games/spider-man-two.jpg"; // Marvel's Spider-Man 2
 import "./games.css";
 import LanguageContext from "../language/LanguageContext";
 
@@ -50,6 +56,37 @@ const Games = () => {
         image: HorizonForbiddenWest,
         title: "Horizon Forbidden West",
         url: "https://www.playstation.com/en-us/games/horizon-forbidden-west/",
+      },
+      // New games below
+      {
+        id: 7,
+        image: FFXVI,
+        title: "FINAL FANTASY XVI",
+        url: "https://www.playstation.com/en-us/games/final-fantasy-xvi/",
+      },
+      {
+        id: 8,
+        image: Wukong,
+        title: "Black Myth: Wukong",
+        url: "https://www.playstation.com/en-us/games/black-myth-wukong/",
+      },
+      {
+        id: 9,
+        image: FFVIIR,
+        title: "FINAL FANTASY VII REBIRTH",
+        url: "https://www.playstation.com/en-us/games/final-fantasy-vii-rebirth/",
+      },
+      {
+        id: 10,
+        image: RDR2,
+        title: "Red Dead Redemption 2",
+        url: "https://www.playstation.com/en-us/games/red-dead-redemption-2/",
+      },
+      {
+        id: 11,
+        image: SpiderMan2,
+        title: "Marvel's Spider-Man 2",
+        url: "https://www.playstation.com/en-us/games/marvels-spider-man-2/",
       },
     ],
     []
@@ -138,9 +175,7 @@ const Games = () => {
                       <span className="trophy__icon bronze">🥉</span>
                       <span className="trophy__count">{trophies.bronze}</span>
                     </div>
-                    <div className="trophy__progress">
-                      {trophies.progress}%
-                    </div>
+                    <div className="trophy__progress">{trophies.progress}%</div>
                   </div>
                 ) : (
                   <div className="games__trophies">
