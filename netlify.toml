@@ -2,6 +2,10 @@
   functions = "netlify/functions"
   publish = "build"
 
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["psn-api"]
+
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
