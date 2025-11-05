@@ -70,6 +70,7 @@ const Games = () => {
       setLoading(false);
     };
     fetchTrophies();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -81,10 +82,10 @@ const Games = () => {
       <div className="games__filters">
         <span className="games__item">
           {isItalian
-            ? " I miei giochi preferiti"
+            ? "🎮 I miei giochi preferiti"
             : isFrench
-            ? " Mes jeux préférés"
-            : " My favorite games"}
+            ? "🎮 Mes jeux préférés"
+            : "🎮 My favorite games"}
         </span>
       </div>
       <div className="games__container grid">
@@ -112,19 +113,19 @@ const Games = () => {
                 ) : trophies ? (
                   <div className="games__trophies">
                     <div className="trophy__item">
-                      <span className="trophy__icon"></span>
+                      <span className="trophy__icon">🏆</span>
                       <span className="trophy__count">{trophies.platinum}</span>
                     </div>
                     <div className="trophy__item">
-                      <span className="trophy__icon"></span>
+                      <span className="trophy__icon">🥇</span>
                       <span className="trophy__count">{trophies.gold}</span>
                     </div>
                     <div className="trophy__item">
-                      <span className="trophy__icon"></span>
+                      <span className="trophy__icon">🥈</span>
                       <span className="trophy__count">{trophies.silver}</span>
                     </div>
                     <div className="trophy__item">
-                      <span className="trophy__icon"></span>
+                      <span className="trophy__icon">🥉</span>
                       <span className="trophy__count">{trophies.bronze}</span>
                     </div>
                   </div>
