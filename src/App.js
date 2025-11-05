@@ -5,6 +5,7 @@ import LanguageProvider from "./components/language/LanguageProvider";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Music from "./components/music/Music";
+import Games from "./components/games/games";
 import Services from "./components/services/Services";
 import Resume from "./components/resume/Resume";
 import Portfolio from "./components/portfolio/Portfolio";
@@ -23,6 +24,7 @@ function App() {
           <Home />
           <About />
           <Music />
+          <Games />
           <Skills />
           <Services />
           <Resume />
