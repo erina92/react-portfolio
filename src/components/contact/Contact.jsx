@@ -10,37 +10,47 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     setMessage("Sending...");
+    // Send via Web3Forms (client-side). This uses the access key you provided.
+    // Web3Forms endpoint: https://api.web3forms.com/submit
+    const WEB3FORMS_KEY = "5629a6c2-2130-4ea7-8a8d-2559859daab1";
 
-    // Simple client-side FormSubmit flow. No server keys required.
-    // Uses your email address as the FormSubmit target.
-    const formSubmitAddress = "erikamiglietta92@gmail.com";
-    const url = `https://formsubmit.co/ajax/${formSubmitAddress}`;
-
-    const formData = new FormData(e.target);
+    // Collect form values
+    const fd = new FormData(e.target);
+    const payload = {
+      access_key: WEB3FORMS_KEY,
+      name: fd.get("user_name"),
+      email: fd.get("user_email"),
+      subject: fd.get("subject") || "New contact message",
+      message: fd.get("message"),
+      // optional metadata
+      site_origin: fd.get("site_origin") || window.location.href,
+      time: fd.get("time") || new Date().toLocaleString(),
+    };
 
     try {
-      const resp = await fetch(url, {
+      const resp = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
       });
 
       const data = await resp.json();
-      if (resp.ok) {
+      if (data.success) {
         setMessage(
           isItalian
-            ? "Email inviata con successo! Controlla la tua casella per la conferma FormSubmit."
+            ? "Email inviata con successo!"
             : isFrench
-            ? "E-mail envoyée avec succès! Vérifiez votre boîte pour la confirmation FormSubmit."
-            : "Email sent successfully! Please check your inbox to confirm the address for FormSubmit."
+            ? "E-mail envoyée avec succès!"
+            : "Email sent successfully!"
         );
         e.target.reset();
+        console.log("Web3Forms response", data);
       } else {
         setMessage("Error sending email: " + (data.message || resp.statusText));
-        console.error("FormSubmit response error:", data);
+        console.error("Web3Forms error:", data);
       }
     } catch (err) {
-      console.error("FormSubmit fetch error", err);
+      console.error("Web3Forms fetch error", err);
       setMessage("Error sending email: " + err.message);
     }
   };
