@@ -26,6 +26,8 @@ import AlibabaOss from "../../assets/alibaba-cloud-badges/oss.png";
 import AlibabaRds from "../../assets/alibaba-cloud-badges/rds.png";
 import AlibabaSlb from "../../assets/alibaba-cloud-badges/slb.png";
 import AlibabaTerraform from "../../assets/alibaba-cloud-badges/terraform.png";
+import CommvaultBadge1 from "../../assets/commvault-badges/commcell.png";
+import CommvaultBadge2 from "../../assets/commvault-badges/commvault.png";
 import AlibabaAutoscalingCert from "../../assets/alibaba-cloud-cert/autoscaling-cert.png";
 import AlibabaEcsCert from "../../assets/alibaba-cloud-cert/ecs-cert.png";
 import AlibabaOssCert from "../../assets/alibaba-cloud-cert/oss-cert.png";
@@ -300,6 +302,20 @@ const Portfolio = () => {
       title: "Terraform on Alibaba",
       category: "Alibaba Cloud Badge",
       url: AlibabaTerraform,
+    },
+    {
+      id: 7,
+      image: CommvaultBadge1,
+      title: "Commvault - CommCell",
+      category: "Commvault Badge",
+      url: CommvaultBadge1,
+    },
+    {
+      id: 8,
+      image: CommvaultBadge2,
+      title: "Commvault Professional",
+      category: "Commvault Badge",
+      url: CommvaultBadge2,
     },
   ];
   const Menu = [
