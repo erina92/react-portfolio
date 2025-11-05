@@ -82,4 +82,19 @@
     grid-template-columns: 1fr;
     padding: 20px;
   }
+  .work__card {
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 18px;
+    background: rgba(30, 30, 40, 0.95);
+    overflow: hidden;
+  }
+  .work__thumbnail {
+    border-radius: 18px 18px 0 0;
+  }
+  .games__title {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
 }
