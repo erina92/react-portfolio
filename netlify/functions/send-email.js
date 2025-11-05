@@ -2,6 +2,8 @@
 // Requires these environment variables set in Netlify UI:
 // SENDGRID_API_KEY, TO_EMAIL, FROM_EMAIL (optional)
 
+const fetch = require('node-fetch');
+
 exports.handler = async function (event, context) {
   try {
     if (event.httpMethod !== 'POST') {
