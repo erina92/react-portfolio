@@ -30,13 +30,13 @@ const Games = () => {
       {
         id: 3,
         image: ACMirage,
-        title: "Assassin's Creed",
+        title: "Assassin's Creed Mirage",
         url: "https://www.playstation.com/en-us/games/assassins-creed-mirage/",
       },
       {
         id: 4,
         image: GhostOfYotei,
-        title: "Ghost of Tsushima",
+        title: "Ghost of Yōtei",
         url: "https://www.playstation.com/en-us/games/ghost-of-yotei/",
       },
       {
@@ -137,6 +137,9 @@ const Games = () => {
                     <div className="trophy__item">
                       <span className="trophy__icon bronze">🥉</span>
                       <span className="trophy__count">{trophies.bronze}</span>
+                    </div>
+                    <div className="trophy__progress">
+                      {trophies.progress}%
                     </div>
                   </div>
                 ) : (

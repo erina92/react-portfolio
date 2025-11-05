@@ -8,6 +8,27 @@ const {
 const cache = new Map();
 const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
 
+// Normalize titles to improve matching across locales and trademark symbols
+const normalizeTitle = (s = "") =>
+  s
+    .toLowerCase()
+    // remove diacritics
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    // normalize quotes/trademark symbols and punctuation
+    .replace(/[®™'’“”:\-]/g, " ")
+    .replace(/[^a-z0-9 ]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+// Aliases from portfolio display names to likely PSN catalog titles
+const TITLE_ALIASES = {
+  "assassins creed mirage": [
+    "assassins creed mirage",
+    "assassin s creed mirage",
+  ],
+  "assassins creed": ["assassins creed mirage"],
+};
+
 exports.handler = async (event, context) => {
   // Enable CORS
   const headers = {
@@ -61,19 +82,60 @@ exports.handler = async (event, context) => {
       { limit: 800 } // Fetch more titles to ensure we find it
     );
 
-    // Find the game by title (case-insensitive partial match)
-    const titleLower = gameTitle.toLowerCase();
-    const matchedTitle = titlesResponse.trophyTitles.find(
-      (t) =>
-        t.trophyTitleName.toLowerCase().includes(titleLower) ||
-        titleLower.includes(t.trophyTitleName.toLowerCase())
-    );
+    // Find the game by title using normalization + aliases
+    const normalizedQuery = normalizeTitle(gameTitle);
+    const aliasList = [
+      normalizedQuery,
+      ...(TITLE_ALIASES[normalizedQuery] || []),
+    ];
+
+    // First pass: substring includes match against aliases
+    let candidates = titlesResponse.trophyTitles.filter((t) => {
+      const nt = normalizeTitle(t.trophyTitleName);
+      return aliasList.some(
+        (a) => nt.includes(a) || a.includes(nt)
+      );
+    });
+
+    // If still none, try token overlap scoring
+    if (candidates.length === 0) {
+      const aliasTokens = new Set(aliasList.join(" ").split(" "));
+      let best = null;
+      let bestScore = 0;
+      for (const t of titlesResponse.trophyTitles) {
+        const nt = normalizeTitle(t.trophyTitleName);
+        const tokens = new Set(nt.split(" "));
+        let inter = 0;
+        for (const tok of tokens) if (aliasTokens.has(tok)) inter++;
+        const score = inter / Math.max(tokens.size, 1);
+        if (score > bestScore) {
+          bestScore = score;
+          best = t;
+        }
+      }
+      if (bestScore >= 0.6) candidates = [best];
+    }
+
+    // Choose the best candidate by highest progress/earned weight
+    const matchedTitle = candidates.sort((a, b) => {
+      const wa = (a.earnedTrophies?.platinum || 0) * 100 +
+                 (a.earnedTrophies?.gold || 0) * 10 +
+                 (a.earnedTrophies?.silver || 0) * 5 +
+                 (a.earnedTrophies?.bronze || 0) +
+                 (a.progress || 0);
+      const wb = (b.earnedTrophies?.platinum || 0) * 100 +
+                 (b.earnedTrophies?.gold || 0) * 10 +
+                 (b.earnedTrophies?.silver || 0) * 5 +
+                 (b.earnedTrophies?.bronze || 0) +
+                 (b.progress || 0);
+      return wb - wa;
+    })[0];
 
     if (!matchedTitle) {
-      // Log available titles for debugging
-      console.log(`Could not find match for: ${gameTitle}`);
-      console.log('Available titles:', titlesResponse.trophyTitles.slice(0, 20).map(t => t.trophyTitleName));
-      
+      // Log a small sample of available titles for debugging
+      console.log(`Could not find match for: ${gameTitle} -> ${normalizedQuery}`);
+      console.log("Sample titles:", titlesResponse.trophyTitles.slice(0, 15).map((t) => t.trophyTitleName));
+
       // Game not found or no trophies available
       return {
         statusCode: 200,
