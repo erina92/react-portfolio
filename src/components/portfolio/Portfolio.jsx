@@ -20,11 +20,18 @@ import Cloud2 from "../../assets/Accenture/cloud career cert.png";
 import Cloud3 from "../../assets/Accenture/cloud computing for business.png";
 import Cloud4 from "../../assets/Accenture/public cloud platforms.png";
 import Cloud5 from "../../assets/Accenture/digital transformation.png";
+import AlibabaAutoscaling from "../../assets/alibaba cloud badges/autoscaling.png";
+import AlibabaEcs from "../../assets/alibaba cloud badges/ecs.png";
+import AlibabaOss from "../../assets/alibaba cloud badges/oss.png";
+import AlibabaRds from "../../assets/alibaba cloud badges/rds.png";
+import AlibabaSlb from "../../assets/alibaba cloud badges/slb.png";
+import AlibabaTerraform from "../../assets/alibaba cloud badges/terraform.png";
 
 const Portfolio = () => {
   const [showCertifications, setShowCertifications] = useState(false);
   const [showLinguisticCert, setShowLinguisticCert] = useState(false);
   const [showAccentureCert, setShowAccentureCert] = useState(false);
+  const [showBadges, setShowBadges] = useState(false);
   const { isItalian, isFrench } = useContext(LanguageContext);
 
   const AccentureCert = [
@@ -178,6 +185,15 @@ const Portfolio = () => {
       url: "https://www.credly.com/badges/3fb81ca6-e2ac-4fdc-a5c7-7d3281d88c05/public_url",
     },
   ];
+
+  const Badges = [
+    { id: 1, image: AlibabaAutoscaling, title: "Autoscaling", category: "Alibaba Cloud Badge", url: AlibabaAutoscaling },
+    { id: 2, image: AlibabaEcs, title: "ECS", category: "Alibaba Cloud Badge", url: AlibabaEcs },
+    { id: 3, image: AlibabaOss, title: "OSS", category: "Alibaba Cloud Badge", url: AlibabaOss },
+    { id: 4, image: AlibabaRds, title: "RDS", category: "Alibaba Cloud Badge", url: AlibabaRds },
+    { id: 5, image: AlibabaSlb, title: "SLB", category: "Alibaba Cloud Badge", url: AlibabaSlb },
+    { id: 6, image: AlibabaTerraform, title: "Terraform on Alibaba", category: "Alibaba Cloud Badge", url: AlibabaTerraform },
+  ];
   const Menu = [
     {
       id: 1,
@@ -249,6 +265,13 @@ const Portfolio = () => {
     setShowAccentureCert(true);
   };
 
+  const handleBadgesClick = () => {
+    setShowBadges(true);
+    setShowCertifications(false);
+    setShowLinguisticCert(false);
+    setShowAccentureCert(false);
+  };
+
   return (
     <section className="work container section" id="portfolio">
       <h2 className="section__title">
@@ -284,6 +307,9 @@ const Portfolio = () => {
         </span>
         <span className="work__item" onClick={handleAccentureCloudBootClick}>
           Accenture Cloud Bootcamp
+        </span>
+        <span className="work__item" onClick={handleBadgesClick}>
+          {isItalian ? "Badge Alibaba" : isFrench ? "Badges Alibaba" : "Alibaba Badges"}
         </span>
       </div>
 
@@ -341,6 +367,29 @@ const Portfolio = () => {
                 <div className="work__card" key={id}>
                   <div className="work__thumbnail">
                     <img src={image} alt="" className="work__img" />
+                    <div className="work__mask"></div>
+                  </div>
+
+                  <span className="work__category">{category}</span>
+                  <h3 className="work__title">{title}</h3>
+                  <a
+                    href={url}
+                    className="work__button"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="icon-link work__button-icon"></i>
+                  </a>
+                </div>
+              );
+            })
+          : showBadges
+          ? Badges.map((badge) => {
+              const { id, image, title, category, url } = badge;
+              return (
+                <div className="work__card" key={`badge-${id}`}>
+                  <div className="work__thumbnail">
+                    <img src={image} alt={title} className="work__img" />
                     <div className="work__mask"></div>
                   </div>
 
