@@ -308,14 +308,14 @@ const Portfolio = () => {
       image: CommvaultBadge1,
       title: "Commvault - CommCell",
       category: "Commvault Badge",
-      url: CommvaultBadge1,
+      url: "https://www.credly.com/badges/371689f0-d4f7-4487-9304-e617970d32f6/public_url",
     },
     {
       id: 8,
       image: CommvaultBadge2,
       title: "Commvault Professional",
       category: "Commvault Badge",
-      url: CommvaultBadge2,
+      url: "https://www.credly.com/badges/3fb81ca6-e2ac-4fdc-a5c7-7d3281d88c05/public_url",
     },
   ];
   const Menu = [
