@@ -10,7 +10,7 @@ const Resume = () => {
       id: 1,
       category: "education",
       icon: "fa-solid fa-graduation-cap",
-      year: "2022 - 2023",
+  year: "2022 - 2025",
       title: "SheCodes React Web Development",
       institution: "SheCodes",
       desc: isItalian

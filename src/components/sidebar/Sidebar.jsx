@@ -118,7 +118,7 @@ const Sidebar = ({ toggleDarkMode }) => {
           </div>
         </nav>
         <div className="nav__footer">
-          <span className="copyright">&copy; 2022 - 2023.</span>
+          <span className="copyright">&copy; 2022 - 2025.</span>
         </div>
       </aside>
 
