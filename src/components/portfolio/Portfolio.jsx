@@ -26,6 +26,12 @@ import AlibabaOss from "../../assets/alibaba cloud badges/oss.png";
 import AlibabaRds from "../../assets/alibaba cloud badges/rds.png";
 import AlibabaSlb from "../../assets/alibaba cloud badges/slb.png";
 import AlibabaTerraform from "../../assets/alibaba cloud badges/terraform.png";
+import AlibabaAutoscalingCert from "../../assets/alibaba cloud cert/autoscaling-cert.png";
+import AlibabaEcsCert from "../../assets/alibaba cloud cert/ecs-cert.png";
+import AlibabaOssCert from "../../assets/alibaba cloud cert/oss-cert.png";
+import AlibabaRdsCert from "../../assets/alibaba cloud cert/rds-cert.png";
+import AlibabaSlbCert from "../../assets/alibaba cloud cert/slb-cert.png";
+import AlibabaTerraformCert from "../../assets/alibaba cloud cert/alibabaterraform-cert.jpg";
 
 const Portfolio = () => {
   const [showCertifications, setShowCertifications] = useState(false);
@@ -184,15 +190,117 @@ const Portfolio = () => {
         : "Certifications",
       url: "https://www.credly.com/badges/3fb81ca6-e2ac-4fdc-a5c7-7d3281d88c05/public_url",
     },
+    {
+      id: 10,
+      image: AlibabaAutoscalingCert,
+      title: "Alibaba Cloud - Autoscaling",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: AlibabaAutoscalingCert,
+    },
+    {
+      id: 11,
+      image: AlibabaEcsCert,
+      title: "Alibaba Cloud - ECS",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: AlibabaEcsCert,
+    },
+    {
+      id: 12,
+      image: AlibabaOssCert,
+      title: "Alibaba Cloud - OSS",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: AlibabaOssCert,
+    },
+    {
+      id: 13,
+      image: AlibabaRdsCert,
+      title: "Alibaba Cloud - RDS",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: AlibabaRdsCert,
+    },
+    {
+      id: 14,
+      image: AlibabaSlbCert,
+      title: "Alibaba Cloud - SLB",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: AlibabaSlbCert,
+    },
+    {
+      id: 15,
+      image: AlibabaTerraformCert,
+      title: "Alibaba Cloud - Terraform",
+      category: isItalian
+        ? "Certificazioni"
+        : isFrench
+        ? "Certifications"
+        : "Certifications",
+      url: AlibabaTerraformCert,
+    },
   ];
 
   const Badges = [
-    { id: 1, image: AlibabaAutoscaling, title: "Autoscaling", category: "Alibaba Cloud Badge", url: AlibabaAutoscaling },
-    { id: 2, image: AlibabaEcs, title: "ECS", category: "Alibaba Cloud Badge", url: AlibabaEcs },
-    { id: 3, image: AlibabaOss, title: "OSS", category: "Alibaba Cloud Badge", url: AlibabaOss },
-    { id: 4, image: AlibabaRds, title: "RDS", category: "Alibaba Cloud Badge", url: AlibabaRds },
-    { id: 5, image: AlibabaSlb, title: "SLB", category: "Alibaba Cloud Badge", url: AlibabaSlb },
-    { id: 6, image: AlibabaTerraform, title: "Terraform on Alibaba", category: "Alibaba Cloud Badge", url: AlibabaTerraform },
+    {
+      id: 1,
+      image: AlibabaAutoscaling,
+      title: "Autoscaling",
+      category: "Alibaba Cloud Badge",
+      url: AlibabaAutoscaling,
+    },
+    {
+      id: 2,
+      image: AlibabaEcs,
+      title: "ECS",
+      category: "Alibaba Cloud Badge",
+      url: AlibabaEcs,
+    },
+    {
+      id: 3,
+      image: AlibabaOss,
+      title: "OSS",
+      category: "Alibaba Cloud Badge",
+      url: AlibabaOss,
+    },
+    {
+      id: 4,
+      image: AlibabaRds,
+      title: "RDS",
+      category: "Alibaba Cloud Badge",
+      url: AlibabaRds,
+    },
+    {
+      id: 5,
+      image: AlibabaSlb,
+      title: "SLB",
+      category: "Alibaba Cloud Badge",
+      url: AlibabaSlb,
+    },
+    {
+      id: 6,
+      image: AlibabaTerraform,
+      title: "Terraform on Alibaba",
+      category: "Alibaba Cloud Badge",
+      url: AlibabaTerraform,
+    },
   ];
   const Menu = [
     {
@@ -309,7 +417,7 @@ const Portfolio = () => {
           Accenture Cloud Bootcamp
         </span>
         <span className="work__item" onClick={handleBadgesClick}>
-          {isItalian ? "Badge Alibaba" : isFrench ? "Badges Alibaba" : "Alibaba Badges"}
+          {isItalian ? "Badges" : isFrench ? "Badges" : "Badges"}
         </span>
       </div>
 
