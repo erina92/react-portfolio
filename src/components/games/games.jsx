@@ -13,11 +13,9 @@ import RDR2 from "../../assets/games/red-dead-two.jpeg"; // Red Dead Redemption 
 import SpiderMan2 from "../../assets/games/spider-man-two.jpg"; // Marvel's Spider-Man 2
 import "./games.css";
 import LanguageContext from "../language/LanguageContext";
-import { useSearch } from "../search/SearchContext";
 
 const Games = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
-  const { filterItems, isSearchActive } = useSearch();
   const [trophyData, setTrophyData] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -136,33 +134,15 @@ const Games = () => {
             ? "Mes jeux préférés"
             : "My favorite games"}
         </span>
-        {isSearchActive && (
-          <div
-            style={{
-              background: "rgba(203, 112, 170, 0.1)",
-              padding: "10px",
-              margin: "10px 0",
-              borderRadius: "5px",
-              fontSize: "14px",
-              color: "var(--title-color)",
-            }}
-          >
-            🔍 Search Active - Showing{" "}
-            {filterItems(gamesData, ["title"]).length} of {gamesData.length}{" "}
-            games
-          </div>
-        )}
       </div>
       <div className="games__container grid">
-        {filterItems(gamesData, ["title"]).map((game) => {
+        {gamesData.map((game) => {
           const { id, image, title, url } = game;
           const trophies = trophyData[title];
           return (
             <div
               key={id}
-              className={`games__card ${
-                isSearchActive ? "search-fade-in" : ""
-              }`}
+              className="games__card"
             >
               <div className="work__card">
                 <div className="work__thumbnail">

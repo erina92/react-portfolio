@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import LanguageContext from "../../components/language/LanguageContext";
-import { useSearch } from "../search/SearchContext";
 import "./portfolio.css";
 import Work1 from "../../assets/work-10.svg";
 import Work2 from "../../assets/work-11.svg";
@@ -42,7 +41,6 @@ const Portfolio = () => {
   const [showAccentureCert, setShowAccentureCert] = useState(false);
   const [showBadges, setShowBadges] = useState(false);
   const { isItalian, isFrench } = useContext(LanguageContext);
-  const { filterItems, isSearchActive } = useSearch();
 
   const AccentureCert = [
     {
@@ -439,38 +437,13 @@ const Portfolio = () => {
         </span>
       </div>
 
-      {isSearchActive && (
-        <div
-          style={{
-            background: "rgba(203, 112, 170, 0.1)",
-            padding: "10px",
-            margin: "10px 0",
-            borderRadius: "5px",
-            fontSize: "14px",
-            color: "var(--title-color)",
-          }}
-        >
-          🔍 Portfolio Search Active - Certifications:{" "}
-          {showCertifications
-            ? filterItems(Certifications, ["title", "category"]).length
-            : 0}
-          /{Certifications.length}, Linguistic:{" "}
-          {showLinguisticCert
-            ? filterItems(LinguisticCert, ["title", "category"]).length
-            : 0}
-          /{LinguisticCert.length}
-        </div>
-      )}
-
       <div className="work__container grid">
         {showCertifications
-          ? filterItems(Certifications, ["title", "category"]).map((cert) => {
+          ? Certifications.map((cert) => {
               const { id, image, title, category, url } = cert;
               return (
                 <div
-                  className={`work__card ${
-                    isSearchActive ? "search-fade-in" : ""
-                  }`}
+                  className="work__card"
                   key={id}
                 >
                   <div className="work__thumbnail">
@@ -492,14 +465,12 @@ const Portfolio = () => {
               );
             })
           : showLinguisticCert
-          ? filterItems(LinguisticCert, ["title", "category"]).map(
+          ? LinguisticCert.map(
               (lingCert) => {
                 const { id, image, title, category, url } = lingCert;
                 return (
                   <div
-                    className={`work__card ${
-                      isSearchActive ? "search-fade-in" : ""
-                    }`}
+                    className="work__card"
                     key={id}
                   >
                     <div className="work__thumbnail">
@@ -522,13 +493,11 @@ const Portfolio = () => {
               }
             )
           : showAccentureCert
-          ? filterItems(AccentureCert, ["title", "category"]).map((AccCert) => {
+          ? AccentureCert.map((AccCert) => {
               const { id, image, title, category, url } = AccCert;
               return (
                 <div
-                  className={`work__card ${
-                    isSearchActive ? "search-fade-in" : ""
-                  }`}
+                  className="work__card"
                   key={id}
                 >
                   <div className="work__thumbnail">
@@ -550,13 +519,11 @@ const Portfolio = () => {
               );
             })
           : showBadges
-          ? filterItems(Badges, ["title", "category"]).map((badge) => {
+          ? Badges.map((badge) => {
               const { id, image, title, category, url } = badge;
               return (
                 <div
-                  className={`work__card ${
-                    isSearchActive ? "search-fade-in" : ""
-                  }`}
+                  className="work__card"
                   key={`badge-${id}`}
                 >
                   <div className="work__thumbnail">
@@ -577,13 +544,11 @@ const Portfolio = () => {
                 </div>
               );
             })
-          : filterItems(Menu, ["title", "category"]).map((elem) => {
+          : Menu.map((elem) => {
               const { id, image, title, category, url } = elem;
               return (
                 <div
-                  className={`work__card ${
-                    isSearchActive ? "search-fade-in" : ""
-                  }`}
+                  className="work__card"
                   key={id}
                 >
                   <div className="work__thumbnail">
@@ -610,3 +575,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
