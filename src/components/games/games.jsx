@@ -140,19 +140,21 @@ const Games = () => {
           const { id, image, title, url } = game;
           const trophies = trophyData[title];
           return (
-            <a
-              key={id}
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="games__link"
-            >
+            <div key={id} className="games__card">
               <div className="work__card">
                 <div className="work__thumbnail">
                   <img src={image} alt={title} className="work__img" />
                   <div className="work__mask"></div>
                 </div>
                 <h3 className="games__title">{title}</h3>
+                <a
+                  href={url}
+                  className="work__button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="icon-link work__button-icon"></i>
+                </a>
                 {loading ? (
                   <div className="games__trophies">
                     <span className="trophy__loading">...</span>
@@ -189,7 +191,7 @@ const Games = () => {
                   </div>
                 )}
               </div>
-            </a>
+            </div>
           );
         })}
       </div>
