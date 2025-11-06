@@ -15,8 +15,6 @@
 
 .theme-toggle:hover {
   border-color: var(--title-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(203, 112, 170, 0.2);
 }
 
 .theme-toggle-track {
@@ -84,7 +82,6 @@
 
 .sun-icon {
   color: #ff6b35;
-  animation: sunRotate 2s linear infinite;
 }
 
 .moon-icon {
@@ -98,17 +95,15 @@
   letter-spacing: 0.5px;
   min-width: 35px;
   text-align: left;
+  color: var(--title-color);
 }
 
-/* Animations */
-@keyframes sunRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Ensure text visibility in dark mode */
+.dark-mode .theme-label {
+  color: var(--text-color-light);
 }
+
+/* Animations removed for better UX */
 
 /* Dark mode styles */
 .dark-mode .theme-toggle {
@@ -118,7 +113,6 @@
 
 .dark-mode .theme-toggle:hover {
   border-color: var(--title-color);
-  box-shadow: 0 4px 15px rgba(203, 112, 170, 0.3);
 }
 
 /* Mobile responsiveness */
