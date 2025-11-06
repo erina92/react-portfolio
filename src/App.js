@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import LanguageProvider from "./components/language/LanguageProvider";
+import { SearchProvider } from "./components/search/SearchContext";
+import SearchBar from "./components/search/SearchBar";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Music from "./components/music/Music";
@@ -18,20 +20,23 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className={darkMode ? "dark-mode" : ""}>
-        <Sidebar toggleDarkMode={toggleDarkMode} />
-        <main className="main">
-          <Home />
-          <About />
-          <Music />
-          <Games />
-          <Skills />
-          <Services />
-          <Resume />
-          <Portfolio />
-          <Contact />
-        </main>
-      </div>
+      <SearchProvider>
+        <div className={darkMode ? "dark-mode" : ""}>
+          <Sidebar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+          <main className="main">
+            <Home />
+            <About />
+            <SearchBar />
+            <Music />
+            <Games />
+            <Skills />
+            <Services />
+            <Resume />
+            <Portfolio />
+            <Contact />
+          </main>
+        </div>
+      </SearchProvider>
     </LanguageProvider>
   );
 }

@@ -15,6 +15,44 @@
   transition: 0.3s;
 }
 
+.theme-toggle-item {
+  margin-bottom: 1rem;
+}
+
+.theme-toggle-item .theme-toggle {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  border-radius: 20px;
+  padding: 0.75rem 0.5rem;
+}
+
+.theme-toggle-item .theme-toggle-track {
+  width: 24px;
+  height: 50px;
+  border-radius: 12px;
+}
+
+.theme-toggle-item .theme-toggle-thumb {
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+}
+
+.theme-toggle-item .theme-toggle.dark .theme-toggle-thumb {
+  transform: translateY(26px);
+}
+
+.theme-toggle-item .theme-toggle.light .theme-toggle-thumb {
+  transform: translateY(0);
+}
+
+.theme-toggle-item .theme-label {
+  margin-top: 0.5rem;
+  font-size: var(--smaller-font-size);
+}
+
 .fa-code {
   color: hsl(249, 23%, 12%);
 }

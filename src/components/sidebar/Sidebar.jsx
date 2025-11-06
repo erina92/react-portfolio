@@ -1,10 +1,10 @@
 import React, { useState, useContext } from "react";
 import "./sidebar.css";
-
+import ThemeToggle from "../theme/ThemeToggle";
 import LanguageContext from "../language/LanguageContext";
 import Select from "react-select";
 
-const Sidebar = ({ toggleDarkMode }) => {
+const Sidebar = ({ toggleDarkMode, darkMode }) => {
   const [toggle, showMenu] = useState(false);
   const { isItalian, isFrench, toggleLanguage } = useContext(LanguageContext);
   const languageOptions = [
@@ -35,15 +35,11 @@ const Sidebar = ({ toggleDarkMode }) => {
         <nav className="nav">
           <div className="nav__menu">
             <ul className="nav__list">
-              <li className="nav__item">
-                <a
-                  href="#!"
-                  onClick={toggleDarkMode}
-                  className="nav__link"
-                  title="Dark Mode"
-                >
-                  <i className="fa-solid fa-adjust"></i>
-                </a>
+              <li className="nav__item theme-toggle-item">
+                <ThemeToggle
+                  darkMode={darkMode}
+                  toggleDarkMode={toggleDarkMode}
+                />
               </li>
               <li className="nav__item">
                 <div className="nav__link language">

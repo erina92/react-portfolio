@@ -18,10 +18,12 @@ import OracleCloud from "../../assets/oracle-cloud.svg";
 import AzureCloud from "../../assets/azure-cloud.svg";
 import AlibabaCloud from "../../assets/alibaba-cloud.svg";
 import LanguageContext from "../../components/language/LanguageContext";
+import { useSearch } from "../search/SearchContext";
 import "./skills.css";
 
 const Skills = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
+  const { filterItems, isSearchActive } = useSearch();
   return (
     <section className="skills container section" id="skills">
       <h2 className="section__title">
@@ -49,7 +51,7 @@ const Skills = () => {
             />
           </header>
         </div>
-        
+
         <div className="skills__card">
           <header className="skill-card__header">
             <a
@@ -236,7 +238,11 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://cloud.google.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://cloud.google.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={GoogleCloud}
                 alt="Google Cloud"
@@ -248,7 +254,11 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://www.oracle.com/cloud/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.oracle.com/cloud/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={OracleCloud}
                 alt="Oracle Cloud"
@@ -260,7 +270,11 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://azure.microsoft.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://azure.microsoft.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={AzureCloud}
                 alt="Azure"
@@ -272,7 +286,11 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://www.alibabacloud.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.alibabacloud.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={AlibabaCloud}
                 alt="Alibaba Cloud"

@@ -13,9 +13,11 @@ import RDR2 from "../../assets/games/red-dead-two.jpeg"; // Red Dead Redemption 
 import SpiderMan2 from "../../assets/games/spider-man-two.jpg"; // Marvel's Spider-Man 2
 import "./games.css";
 import LanguageContext from "../language/LanguageContext";
+import { useSearch } from "../search/SearchContext";
 
 const Games = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
+  const { filterItems, isSearchActive } = useSearch();
   const [trophyData, setTrophyData] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -136,11 +138,16 @@ const Games = () => {
         </span>
       </div>
       <div className="games__container grid">
-        {gamesData.map((game) => {
+        {filterItems(gamesData, ["title"]).map((game) => {
           const { id, image, title, url } = game;
           const trophies = trophyData[title];
           return (
-            <div key={id} className="games__card">
+            <div
+              key={id}
+              className={`games__card ${
+                isSearchActive ? "search-fade-in" : ""
+              }`}
+            >
               <div className="work__card">
                 <div className="work__thumbnail">
                   <img src={image} alt={title} className="work__img" />

@@ -13,7 +13,8 @@ const normalizeTitle = (s = "") =>
   s
     .toLowerCase()
     // remove diacritics
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     // normalize quotes/trademark symbols and punctuation
     .replace(/[®™'’“”:\-]/g, " ")
     .replace(/[^a-z0-9 ]/g, " ")
@@ -92,9 +93,7 @@ exports.handler = async (event, context) => {
     // First pass: substring includes match against aliases
     let candidates = titlesResponse.trophyTitles.filter((t) => {
       const nt = normalizeTitle(t.trophyTitleName);
-      return aliasList.some(
-        (a) => nt.includes(a) || a.includes(nt)
-      );
+      return aliasList.some((a) => nt.includes(a) || a.includes(nt));
     });
 
     // If still none, try token overlap scoring
@@ -118,23 +117,30 @@ exports.handler = async (event, context) => {
 
     // Choose the best candidate by highest progress/earned weight
     const matchedTitle = candidates.sort((a, b) => {
-      const wa = (a.earnedTrophies?.platinum || 0) * 100 +
-                 (a.earnedTrophies?.gold || 0) * 10 +
-                 (a.earnedTrophies?.silver || 0) * 5 +
-                 (a.earnedTrophies?.bronze || 0) +
-                 (a.progress || 0);
-      const wb = (b.earnedTrophies?.platinum || 0) * 100 +
-                 (b.earnedTrophies?.gold || 0) * 10 +
-                 (b.earnedTrophies?.silver || 0) * 5 +
-                 (b.earnedTrophies?.bronze || 0) +
-                 (b.progress || 0);
+      const wa =
+        (a.earnedTrophies?.platinum || 0) * 100 +
+        (a.earnedTrophies?.gold || 0) * 10 +
+        (a.earnedTrophies?.silver || 0) * 5 +
+        (a.earnedTrophies?.bronze || 0) +
+        (a.progress || 0);
+      const wb =
+        (b.earnedTrophies?.platinum || 0) * 100 +
+        (b.earnedTrophies?.gold || 0) * 10 +
+        (b.earnedTrophies?.silver || 0) * 5 +
+        (b.earnedTrophies?.bronze || 0) +
+        (b.progress || 0);
       return wb - wa;
     })[0];
 
     if (!matchedTitle) {
       // Log a small sample of available titles for debugging
-      console.log(`Could not find match for: ${gameTitle} -> ${normalizedQuery}`);
-      console.log("Sample titles:", titlesResponse.trophyTitles.slice(0, 15).map((t) => t.trophyTitleName));
+      console.log(
+        `Could not find match for: ${gameTitle} -> ${normalizedQuery}`
+      );
+      console.log(
+        "Sample titles:",
+        titlesResponse.trophyTitles.slice(0, 15).map((t) => t.trophyTitleName)
+      );
 
       // Game not found or no trophies available
       return {
