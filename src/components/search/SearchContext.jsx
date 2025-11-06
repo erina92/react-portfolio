@@ -20,21 +20,50 @@ export const SearchProvider = ({ children }) => {
   };
 
   const handleSearch = (term) => {
+    console.log("🔍 HandleSearch called with:", term);
     setSearchTerm(term);
     setIsSearchActive(term.length > 0);
+    console.log(
+      "🔍 Search state updated - term:",
+      term,
+      "isActive:",
+      term.length > 0
+    );
   };
 
   // Filter function that can be used by any component
   const filterItems = (items, searchFields = ["title", "category", "name"]) => {
-    if (!searchTerm) return items;
+    console.log("🔍 FilterItems called:", {
+      searchTerm,
+      itemsCount: items.length,
+      searchFields,
+    });
+
+    if (!searchTerm) {
+      console.log("🔍 No search term, returning all items");
+      return items;
+    }
 
     const lowercaseSearch = searchTerm.toLowerCase();
-    return items.filter((item) =>
+    console.log("🔍 Searching for:", lowercaseSearch);
+
+    const filtered = items.filter((item) =>
       searchFields.some((field) => {
         const value = item[field];
-        return value && value.toLowerCase().includes(lowercaseSearch);
+        const matches = value && value.toLowerCase().includes(lowercaseSearch);
+        if (matches) {
+          console.log("🔍 Match found:", {
+            field,
+            value,
+            item: item.title || item.name || item.id,
+          });
+        }
+        return matches;
       })
     );
+
+    console.log("🔍 Filtered results:", filtered.length, "items");
+    return filtered;
   };
 
   const value = {

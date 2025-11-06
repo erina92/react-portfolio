@@ -136,6 +136,22 @@ const Games = () => {
             ? "Mes jeux préférés"
             : "My favorite games"}
         </span>
+        {isSearchActive && (
+          <div
+            style={{
+              background: "rgba(203, 112, 170, 0.1)",
+              padding: "10px",
+              margin: "10px 0",
+              borderRadius: "5px",
+              fontSize: "14px",
+              color: "var(--title-color)",
+            }}
+          >
+            🔍 Search Active - Showing{" "}
+            {filterItems(gamesData, ["title"]).length} of {gamesData.length}{" "}
+            games
+          </div>
+        )}
       </div>
       <div className="games__container grid">
         {filterItems(gamesData, ["title"]).map((game) => {

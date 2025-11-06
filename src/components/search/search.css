@@ -134,3 +134,17 @@
     transform: translateY(0);
   }
 }
+
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: var(--title-color-dark);
+  font-style: italic;
+  grid-column: 1 / -1; /* Span all columns in grid */
+}
+
+.no-results p {
+  margin: 0;
+  font-size: var(--normal-font-size);
+}

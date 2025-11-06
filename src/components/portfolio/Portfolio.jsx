@@ -439,6 +439,29 @@ const Portfolio = () => {
         </span>
       </div>
 
+      {isSearchActive && (
+        <div
+          style={{
+            background: "rgba(203, 112, 170, 0.1)",
+            padding: "10px",
+            margin: "10px 0",
+            borderRadius: "5px",
+            fontSize: "14px",
+            color: "var(--title-color)",
+          }}
+        >
+          🔍 Portfolio Search Active - Certifications:{" "}
+          {showCertifications
+            ? filterItems(Certifications, ["title", "category"]).length
+            : 0}
+          /{Certifications.length}, Linguistic:{" "}
+          {showLinguisticCert
+            ? filterItems(LinguisticCert, ["title", "category"]).length
+            : 0}
+          /{LinguisticCert.length}
+        </div>
+      )}
+
       <div className="work__container grid">
         {showCertifications
           ? filterItems(Certifications, ["title", "category"]).map((cert) => {

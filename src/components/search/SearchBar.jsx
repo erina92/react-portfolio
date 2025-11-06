@@ -6,6 +6,7 @@ const SearchBar = () => {
   const { searchTerm, handleSearch, clearSearch, isSearchActive } = useSearch();
 
   const handleInputChange = (e) => {
+    console.log("🎯 Search input changed:", e.target.value);
     handleSearch(e.target.value);
   };
 
@@ -39,6 +40,19 @@ const SearchBar = () => {
       {isSearchActive && (
         <div className="search-results-info">
           <span className="search-term">Searching for: "{searchTerm}"</span>
+          <div
+            style={{
+              fontSize: "12px",
+              marginTop: "5px",
+              color: "#666",
+              background: "rgba(0,255,0,0.1)",
+              padding: "5px",
+              borderRadius: "3px",
+            }}
+          >
+            ✅ Debug: Search active = {isSearchActive ? "YES" : "NO"}, Term
+            length = {searchTerm.length}
+          </div>
         </div>
       )}
     </div>
