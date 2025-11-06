@@ -140,10 +140,7 @@ const Games = () => {
           const { id, image, title, url } = game;
           const trophies = trophyData[title];
           return (
-            <div
-              key={id}
-              className="games__card"
-            >
+            <div key={id} className="games__card">
               <div className="work__card">
                 <div className="work__thumbnail">
                   <img src={image} alt={title} className="work__img" />

@@ -137,7 +137,68 @@
   border-radius: 10px;
 }
 
+/* Mobile Theme Toggle - Top Right Corner */
+.mobile-theme-toggle {
+  display: none; /* Hidden on desktop */
+}
+
 @media screen and (max-width: 1024px) {
+  .mobile-theme-toggle {
+    display: block;
+    position: fixed;
+    top: 1.25rem;
+    right: 1.875rem;
+    z-index: 100;
+    background: var(--body-color);
+    border-radius: 20px;
+    padding: 0.2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--container-color);
+  }
+
+  .mobile-theme-toggle .theme-toggle {
+    border-radius: 15px;
+    padding: 0.4rem 0.75rem;
+    font-size: var(--smaller-font-size);
+    writing-mode: initial;
+    text-orientation: initial;
+    transform: none;
+    border: none;
+    background: transparent;
+  }
+
+  .mobile-theme-toggle .theme-toggle-track {
+    width: 35px;
+    height: 18px;
+    border-radius: 9px;
+  }
+
+  .mobile-theme-toggle .theme-toggle-thumb {
+    width: 14px;
+    height: 14px;
+    top: 2px;
+    left: 2px;
+  }
+
+  .mobile-theme-toggle .theme-toggle.dark .theme-toggle-thumb {
+    transform: translateX(17px);
+  }
+
+  .mobile-theme-toggle .theme-toggle.light .theme-toggle-thumb {
+    transform: translateX(0);
+  }
+
+  .mobile-theme-toggle .theme-label {
+    margin-top: 0;
+    margin-left: 0.5rem;
+    font-size: var(--smaller-font-size);
+  }
+
+  /* Hide desktop theme toggle on mobile */
+  .theme-toggle-item {
+    display: none;
+  }
+
   .aside {
     left: -110px;
   }
@@ -158,12 +219,64 @@
 }
 
 @media screen and (max-width: 768px) {
+  .mobile-theme-toggle {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .mobile-theme-toggle .theme-toggle {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .mobile-theme-toggle .theme-toggle-track {
+    width: 30px;
+    height: 16px;
+  }
+
+  .mobile-theme-toggle .theme-toggle-thumb {
+    width: 12px;
+    height: 12px;
+  }
+
+  .mobile-theme-toggle .theme-toggle.dark .theme-toggle-thumb {
+    transform: translateX(14px);
+  }
+
   .language-dropdown {
     width: 5vw;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .mobile-theme-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .mobile-theme-toggle .theme-toggle {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.6rem;
+  }
+
+  .mobile-theme-toggle .theme-toggle-track {
+    width: 28px;
+    height: 15px;
+  }
+
+  .mobile-theme-toggle .theme-toggle-thumb {
+    width: 11px;
+    height: 11px;
+  }
+
+  .mobile-theme-toggle .theme-toggle.dark .theme-toggle-thumb {
+    transform: translateX(13px);
+  }
+
+  .mobile-theme-toggle .theme-label {
+    font-size: 0.6rem;
+  }
+
   .aside {
     align-items: center;
   }

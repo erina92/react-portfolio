@@ -27,6 +27,11 @@ const Sidebar = ({ toggleDarkMode, darkMode }) => {
 
   return (
     <>
+      {/* Mobile Theme Toggle - Top Right Corner */}
+      <div className="mobile-theme-toggle">
+        <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      </div>
+
       <aside className={toggle ? "aside show-menu" : "aside"}>
         <a href="#home" className="nav__logo">
           <i className="fa-solid fa-code"></i>

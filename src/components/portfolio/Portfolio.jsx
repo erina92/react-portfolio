@@ -442,10 +442,7 @@ const Portfolio = () => {
           ? Certifications.map((cert) => {
               const { id, image, title, category, url } = cert;
               return (
-                <div
-                  className="work__card"
-                  key={id}
-                >
+                <div className="work__card" key={id}>
                   <div className="work__thumbnail">
                     <img src={image} alt="" className="work__img" />
                     <div className="work__mask"></div>
@@ -465,41 +462,33 @@ const Portfolio = () => {
               );
             })
           : showLinguisticCert
-          ? LinguisticCert.map(
-              (lingCert) => {
-                const { id, image, title, category, url } = lingCert;
-                return (
-                  <div
-                    className="work__card"
-                    key={id}
-                  >
-                    <div className="work__thumbnail">
-                      <img src={image} alt="" className="work__img" />
-                      <div className="work__mask"></div>
-                    </div>
-
-                    <span className="work__category">{category}</span>
-                    <h3 className="work__title">{title}</h3>
-                    <a
-                      href={url}
-                      className="work__button"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <i className="icon-link work__button-icon"></i>
-                    </a>
+          ? LinguisticCert.map((lingCert) => {
+              const { id, image, title, category, url } = lingCert;
+              return (
+                <div className="work__card" key={id}>
+                  <div className="work__thumbnail">
+                    <img src={image} alt="" className="work__img" />
+                    <div className="work__mask"></div>
                   </div>
-                );
-              }
-            )
+
+                  <span className="work__category">{category}</span>
+                  <h3 className="work__title">{title}</h3>
+                  <a
+                    href={url}
+                    className="work__button"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="icon-link work__button-icon"></i>
+                  </a>
+                </div>
+              );
+            })
           : showAccentureCert
           ? AccentureCert.map((AccCert) => {
               const { id, image, title, category, url } = AccCert;
               return (
-                <div
-                  className="work__card"
-                  key={id}
-                >
+                <div className="work__card" key={id}>
                   <div className="work__thumbnail">
                     <img src={image} alt="" className="work__img" />
                     <div className="work__mask"></div>
@@ -522,10 +511,7 @@ const Portfolio = () => {
           ? Badges.map((badge) => {
               const { id, image, title, category, url } = badge;
               return (
-                <div
-                  className="work__card"
-                  key={`badge-${id}`}
-                >
+                <div className="work__card" key={`badge-${id}`}>
                   <div className="work__thumbnail">
                     <img src={image} alt={title} className="work__img" />
                     <div className="work__mask"></div>
@@ -547,10 +533,7 @@ const Portfolio = () => {
           : Menu.map((elem) => {
               const { id, image, title, category, url } = elem;
               return (
-                <div
-                  className="work__card"
-                  key={id}
-                >
+                <div className="work__card" key={id}>
                   <div className="work__thumbnail">
                     <img src={image} alt="" className="work__img" />
                     <div className="work__mask"></div>
@@ -575,4 +558,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
