@@ -175,7 +175,7 @@
     row-gap: 1.875rem;
   }
   .about__description {
-    text-align: center;
+    text-align: justify;
   }
 
   .about__info {
