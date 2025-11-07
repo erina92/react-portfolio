@@ -29,10 +29,12 @@
 
 .theme-toggle.dark .theme-toggle-track {
   background: linear-gradient(45deg, #1a1a2e, #16213e);
+  border: 1px solid #4a4a7c;
 }
 
 .theme-toggle.light .theme-toggle-track {
   background: linear-gradient(45deg, #87ceeb, #ffd700);
+  border: 1px solid #ddd;
 }
 
 .theme-toggle-thumb {
@@ -52,12 +54,14 @@
 
 .theme-toggle.dark .theme-toggle-thumb {
   transform: translateX(26px);
-  background: #2d3748;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .theme-toggle.light .theme-toggle-thumb {
   transform: translateX(0);
   background: #ffd700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .theme-icon {
@@ -85,9 +89,18 @@
 }
 
 .moon-icon {
-  color: #e2e8f0;
+  color: #ffffff;
   fill: currentColor;
   stroke: none;
+}
+
+/* Dark mode specific icon colors */
+.dark-mode .moon-icon {
+  color: #ffffff;
+}
+
+.dark-mode .sun-icon {
+  color: #ff6b35;
 }
 
 .theme-label {
@@ -118,12 +131,13 @@
 
 /* Dark mode styles */
 .dark-mode .theme-toggle {
-  border-color: rgba(255, 255, 255, 0.1);
-  color: var(--title-color);
+  border-color: #4a4a7c;
+  color: #ffffff;
+  background: rgba(26, 26, 46, 0.9);
 }
 
 .dark-mode .theme-toggle:hover {
-  border-color: var(--title-color);
+  border-color: #6a6a9c;
 }
 
 /* Mobile responsiveness */
