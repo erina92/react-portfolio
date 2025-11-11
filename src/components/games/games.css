@@ -123,6 +123,15 @@
   color: hsl(248, 49%, 91%);
 }
 
+/* Light mode specific styling */
+.games__title {
+  color: var(--title-color);
+}
+
+.games__item {
+  color: var(--title-color);
+}
+
 @media screen and (max-width: 1024px) {
   .games__filters {
     justify-content: center;
@@ -171,8 +180,14 @@
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     border-radius: 18px;
-    background: rgba(30, 30, 40, 0.95);
+    background: var(--container-color);
     overflow: hidden;
+  }
+
+  /* Dark mode mobile card styling */
+  .dark-mode .work__card {
+    background: rgba(30, 30, 40, 0.95);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   }
   .work__thumbnail {
     border-radius: 18px 18px 0 0;
@@ -181,6 +196,17 @@
     font-size: 1.15rem;
     margin-bottom: 0.5rem;
     letter-spacing: 0.5px;
+    color: var(--title-color);
+  }
+
+  /* Light mode mobile title */
+  .games__title {
+    color: #2d3748;
+  }
+
+  /* Dark mode mobile title */
+  .dark-mode .games__title {
+    color: #ffffff;
   }
   .games__trophies {
     gap: 0.5rem;
