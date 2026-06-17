@@ -1,15 +1,16 @@
 .music__container {
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1.875rem;
-  row-gap: 1.875rem;
-  justify-items: center; /* center cards inside grid columns */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .music__filters {
   display: flex;
   align-items: center;
-  column-gap: 1.875rem;
-  margin-bottom: 2.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .music-slash {
@@ -20,74 +21,14 @@
   font-weight: var(--font-bold);
 }
 
-/* Keep card width constrained but don't add additional visual container styles */
-.music__card {
-  max-width: 320px; /* constrain card width to match embed */
-  width: 100%;
-  padding: 0; /* use existing markup's spacing */
-  background: transparent;
-  box-shadow: none;
-}
-
-/* Make embedded spotify iframes responsive and constrained to card */
-.embed__content,
-iframe.embed__content {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* keep square */
-  border: 0;
+.embed__content {
   display: block;
+  border: 0;
   border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-iframe {
-  border: 0px;
-}
-
-@media screen and (max-width: 1024px) {
-  .music__container {
-    grid-template-columns: repeat(2, 300px);
-    column-gap: 1.875rem;
-
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .music__filters {
-    justify-content: center;
-  }
-  iframe {
-    border: 0px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .music__container {
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .music__filters {
-    justify-content: center;
-  }
-
-  iframe {
-    border: 0px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .music__container {
-    grid-template-columns: repeat(1, 100%);
-    justify-content: center;
-  }
-
-  .music__filters {
-    justify-content: center;
-  }
-
-  iframe {
-    border: 0px;
-    width: 100%;
-    height: auto;
-  }
+.embed__content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
