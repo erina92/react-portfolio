@@ -9,7 +9,7 @@ import OracleCloud from "../../assets/oracle-cloud.svg";
 import AzureCloud from "../../assets/azure-cloud.svg";
 import AlibabaCloud from "../../assets/alibaba-cloud.svg";
 import CommvaultLogo from "../../assets/commvault-logo.png";
-import NetAppLogo from "../../assets/netapp-ontap-logo.png";
+import NetAppLogo from "../../assets/netapp-ontap-logo-2.jpg";
 
 const Services = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
