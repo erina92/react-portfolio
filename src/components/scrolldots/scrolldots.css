@@ -1,0 +1,42 @@
+.scroll-dots {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 0.75rem;
+  border-radius: 50px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(100, 80, 160, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.scroll-dot.active {
+  background: #cb70aa;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.scroll-dot:hover:not(.active) {
+  background: rgba(100, 80, 160, 0.6);
+}
+
+/* Hide on mobile (vertical layout) */
+@media screen and (max-width: 1024px) {
+  .scroll-dots {
+    display: none;
+  }
+}

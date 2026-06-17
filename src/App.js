@@ -6,6 +6,7 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import useDarkMode from "./DarkMode";
 import WhatsAppButton from "./components/whatsapp/WhatsAppButton";
+import ScrollDots from "./components/scrolldots/ScrollDots";
 
 const Music = lazy(() => import("./components/music/Music"));
 const Games = lazy(() => import("./components/games/Games"));
@@ -37,6 +38,7 @@ function App() {
         </main>
       </div>
       <WhatsAppButton />
+      <ScrollDots />
     </LanguageProvider>
   );
 }

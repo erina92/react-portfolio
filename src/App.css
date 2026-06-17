@@ -1,9 +1,46 @@
+/* ── Horizontal scroll layout (desktop) ── */
 .main {
   margin-left: 110px;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: 100vh;
+  scrollbar-width: none;
 }
 
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.main > section {
+  min-width: calc(100vw - 110px);
+  width: calc(100vw - 110px);
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  scrollbar-width: thin;
+}
+
+/* ── Mobile: revert to vertical ── */
 @media screen and (max-width: 1024px) {
   .main {
     margin-left: 0;
+    display: block;
+    overflow-x: visible;
+    overflow-y: visible;
+    scroll-snap-type: none;
+    height: auto;
+  }
+
+  .main > section {
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+    scroll-snap-align: none;
   }
 }

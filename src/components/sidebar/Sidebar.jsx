@@ -4,6 +4,14 @@ import ThemeToggle from "../theme/ThemeToggle";
 import LanguageContext from "../language/LanguageContext";
 import Select from "react-select";
 
+const scrollTo = (id) => {
+  const main = document.querySelector('.main');
+  const target = document.getElementById(id);
+  if (main && target) {
+    main.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
+  }
+};
+
 const Sidebar = ({ toggleDarkMode, darkMode }) => {
   const [toggle, showMenu] = useState(false);
   const { isItalian, isFrench, toggleLanguage } = useContext(LanguageContext);
@@ -33,7 +41,7 @@ const Sidebar = ({ toggleDarkMode, darkMode }) => {
       </div>
 
       <aside className={toggle ? "aside show-menu" : "aside"}>
-        <a href="#home" className="nav__logo">
+        <a href="#home" className="nav__logo" onClick={(e) => { e.preventDefault(); scrollTo('home'); }}>
           <i className="fa-solid fa-code"></i>
         </a>
 
@@ -74,47 +82,27 @@ const Sidebar = ({ toggleDarkMode, darkMode }) => {
                   />
                 </div>
               </li>
-              <li className="nav__item">
-                <a href="#home" className="nav__link" title="Home" aria-label="Home">
-                  <i className="fa-solid fa-house" aria-hidden="true"></i>
-                </a>
-              </li>
-
-              <li className="nav__item">
-                <a href="#about" className="nav__link" title="About" aria-label="About">
-                  <i className="fa-solid fa-user" aria-hidden="true"></i>
-                </a>
-              </li>
-
-              <li className="nav__item">
-                <a href="#skills" className="nav__link" title="Skills" aria-label="Skills">
-                  <i className="fa-solid fa-wrench" aria-hidden="true"></i>
-                </a>
-              </li>
-
-              <li className="nav__item">
-                <a href="#services" className="nav__link" aria-label="Services">
-                  <i className="fa-solid fa-briefcase" aria-hidden="true"></i>
-                </a>
-              </li>
-
-              <li className="nav__item">
-                <a href="#resume" className="nav__link" title="Resume" aria-label="Resume">
-                  <i className="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                </a>
-              </li>
-
-              <li className="nav__item">
-                <a href="#portfolio" className="nav__link" title="Portfolio" aria-label="Portfolio">
-                  <i className="fa-solid fa-layer-group" aria-hidden="true"></i>
-                </a>
-              </li>
-
-              <li className="nav__item">
-                <a href="#contact" className="nav__link" title="Contact" aria-label="Contact">
-                  <i className="fa-solid fa-envelope" aria-hidden="true"></i>
-                </a>
-              </li>
+              {[
+                { id: 'home',      icon: 'fa-house',        label: 'Home' },
+                { id: 'about',     icon: 'fa-user',         label: 'About' },
+                { id: 'skills',    icon: 'fa-wrench',       label: 'Skills' },
+                { id: 'services',  icon: 'fa-briefcase',    label: 'Services' },
+                { id: 'resume',    icon: 'fa-graduation-cap', label: 'Resume' },
+                { id: 'portfolio', icon: 'fa-layer-group',  label: 'Portfolio' },
+                { id: 'contact',   icon: 'fa-envelope',     label: 'Contact' },
+              ].map(({ id, icon, label }) => (
+                <li className="nav__item" key={id}>
+                  <a
+                    href={`#${id}`}
+                    className="nav__link"
+                    title={label}
+                    aria-label={label}
+                    onClick={(e) => { e.preventDefault(); scrollTo(id); }}
+                  >
+                    <i className={`fa-solid ${icon}`} aria-hidden="true"></i>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </nav>
