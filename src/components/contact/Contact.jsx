@@ -10,30 +10,24 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     setMessage("Sending...");
-    const WEB3FORMS_KEY = process.env.REACT_APP_WEB3FORMS_KEY;
 
-    // Collect form values
     const fd = new FormData(e.target);
     const payload = {
-      access_key: WEB3FORMS_KEY,
-      name: fd.get("user_name"),
-      email: fd.get("user_email"),
+      user_name: fd.get("user_name"),
+      user_email: fd.get("user_email"),
       subject: fd.get("subject") || "New contact message",
       message: fd.get("message"),
-      // optional metadata
-      site_origin: fd.get("site_origin") || window.location.href,
-      time: fd.get("time") || new Date().toLocaleString(),
     };
 
     try {
-      const resp = await fetch("https://api.web3forms.com/submit", {
+      const resp = await fetch("/.netlify/functions/send-email", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
       const data = await resp.json();
-      if (data.success) {
+      if (resp.ok) {
         setMessage(
           isItalian
             ? "Email inviata con successo!"
@@ -42,13 +36,12 @@ const Contact = () => {
             : "Email sent successfully!"
         );
         e.target.reset();
-        console.log("Web3Forms response", data);
       } else {
-        setMessage("Error sending email: " + (data.message || resp.statusText));
-        console.error("Web3Forms error:", data);
+        setMessage("Error sending email: " + (data.error || resp.statusText));
+        console.error("SendGrid error:", data);
       }
     } catch (err) {
-      console.error("Web3Forms fetch error", err);
+      console.error("SendGrid fetch error", err);
       setMessage("Error sending email: " + err.message);
     }
   };
@@ -157,10 +150,6 @@ const Contact = () => {
               }
             ></textarea>
           </div>
-
-            {/* hidden fields to send extra info to EmailJS template */}
-            <input type="hidden" name="site_origin" value="" />
-            <input type="hidden" name="time" value="" />
 
             <button className="btn">
             {isItalian
