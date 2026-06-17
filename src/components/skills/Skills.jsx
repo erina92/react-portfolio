@@ -55,7 +55,7 @@ const Skills = () => {
             <a
               href="https://www.w3schools.com/css/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={CSS}
@@ -71,7 +71,7 @@ const Skills = () => {
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={Javascript}
@@ -84,7 +84,7 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://react.dev/" target="_blank" rel="noreferrer">
+            <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
               <img
                 src={ReactLogo}
                 alt="React"
@@ -96,7 +96,7 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://www.npmjs.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">
               <img
                 src={Npm}
                 alt="Npm"
@@ -108,7 +108,7 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://nodejs.org/en" target="_blank" rel="noreferrer">
+            <a href="https://nodejs.org/en" target="_blank" rel="noopener noreferrer">
               <img
                 src={Nodejs}
                 alt="Nodejs"
@@ -123,7 +123,7 @@ const Skills = () => {
             <a
               href="https://code.visualstudio.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={VSCode}
@@ -136,7 +136,7 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
+            <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">
               <img
                 src={GitLogo}
                 alt="Git"
@@ -151,7 +151,7 @@ const Skills = () => {
             <a
               href="https://desktop.github.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={Github}
@@ -167,7 +167,7 @@ const Skills = () => {
             <a
               href="https://slack.com/intl/it-it"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={Slack}
@@ -180,7 +180,7 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">
               <img
                 src={NetlifyLogo}
                 alt="Netlify"
@@ -195,7 +195,7 @@ const Skills = () => {
             <a
               href="https://getbootstrap.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={BootStrap}
@@ -208,7 +208,7 @@ const Skills = () => {
         </div>
         <div className="skills__card">
           <header className="skill-card__header">
-            <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+            <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
               <img
                 src={FigmaLogo}
                 alt="Figma"
@@ -223,7 +223,7 @@ const Skills = () => {
             <a
               href="https://www.getpaint.net/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={Paintnet}
@@ -239,7 +239,7 @@ const Skills = () => {
             <a
               href="https://cloud.google.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={GoogleCloud}
@@ -255,7 +255,7 @@ const Skills = () => {
             <a
               href="https://www.oracle.com/cloud/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={OracleCloud}
@@ -271,7 +271,7 @@ const Skills = () => {
             <a
               href="https://azure.microsoft.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={AzureCloud}
@@ -287,7 +287,7 @@ const Skills = () => {
             <a
               href="https://www.alibabacloud.com/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <img
                 src={AlibabaCloud}

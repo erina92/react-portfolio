@@ -3,13 +3,11 @@ import LanguageContext from "./LanguageContext";
 
 const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState("en");
-  const [isItalian, setIsItalian] = useState(false);
-  const [isFrench, setIsFrench] = useState(false);
+  const isItalian = language === "it";
+  const isFrench = language === "fr";
 
   const toggleLanguage = (selectedLanguage) => {
     setLanguage(selectedLanguage);
-    setIsItalian(selectedLanguage === "it");
-    setIsFrench(selectedLanguage === "fr");
   };
 
   const languageContextValue = {

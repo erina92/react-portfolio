@@ -143,7 +143,7 @@ const Games = () => {
             <div key={id} className="games__card">
               <div className="work__card">
                 <div className="work__thumbnail">
-                  <img src={image} alt={title} className="work__img" />
+                  <img src={image} alt={title} loading="lazy" className="work__img" />
                   <div className="work__mask"></div>
                 </div>
                 <h3 className="games__title">{title}</h3>

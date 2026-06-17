@@ -79,3 +79,23 @@
     text-align: center;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .contact__form-group {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__form-div {
+    height: 3.25rem;
+  }
+
+  .contact__form-input {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}

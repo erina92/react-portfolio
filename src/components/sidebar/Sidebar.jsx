@@ -75,44 +75,44 @@ const Sidebar = ({ toggleDarkMode, darkMode }) => {
                 </div>
               </li>
               <li className="nav__item">
-                <a href="#home" className="nav__link" title="Home">
-                  <i className="fa-solid fa-house"></i>
+                <a href="#home" className="nav__link" title="Home" aria-label="Home">
+                  <i className="fa-solid fa-house" aria-hidden="true"></i>
                 </a>
               </li>
 
               <li className="nav__item">
-                <a href="#about" className="nav__link" title="About">
-                  <i className="fa-solid fa-user"></i>
+                <a href="#about" className="nav__link" title="About" aria-label="About">
+                  <i className="fa-solid fa-user" aria-hidden="true"></i>
                 </a>
               </li>
 
               <li className="nav__item">
-                <a href="#skills" className="nav__link" title="Skills">
-                  <i className="fa-solid fa-wrench"></i>
+                <a href="#skills" className="nav__link" title="Skills" aria-label="Skills">
+                  <i className="fa-solid fa-wrench" aria-hidden="true"></i>
                 </a>
               </li>
 
               <li className="nav__item">
-                <a href="#services" className="nav__link">
-                  <i className="fa-solid fa-briefcase"></i>
+                <a href="#services" className="nav__link" aria-label="Services">
+                  <i className="fa-solid fa-briefcase" aria-hidden="true"></i>
                 </a>
               </li>
 
               <li className="nav__item">
-                <a href="#resume" className="nav__link" title="Resume">
-                  <i className="fa-solid fa-graduation-cap"></i>
+                <a href="#resume" className="nav__link" title="Resume" aria-label="Resume">
+                  <i className="fa-solid fa-graduation-cap" aria-hidden="true"></i>
                 </a>
               </li>
 
               <li className="nav__item">
-                <a href="#portfolio" className="nav__link" title="Portfolio">
-                  <i className="fa-solid fa-layer-group"></i>
+                <a href="#portfolio" className="nav__link" title="Portfolio" aria-label="Portfolio">
+                  <i className="fa-solid fa-layer-group" aria-hidden="true"></i>
                 </a>
               </li>
 
               <li className="nav__item">
-                <a href="#contact" className="nav__link" title="Contact">
-                  <i className="fa-solid fa-envelope"></i>
+                <a href="#contact" className="nav__link" title="Contact" aria-label="Contact">
+                  <i className="fa-solid fa-envelope" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>

@@ -7,27 +7,30 @@ const HeaderSocials = () => {
         href="https://www.instagram.com/eri.codes/"
         className="socials__link"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+        aria-label="Instagram profile"
       >
-        <i className="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-instagram" aria-hidden="true"></i>
       </a>
 
       <a
         href="https://github.com/erina92"
         className="socials__link"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+        aria-label="GitHub profile"
       >
-        <i className="fa-brands fa-square-github"></i>
+        <i className="fa-brands fa-square-github" aria-hidden="true"></i>
       </a>
 
       <a
         href="https://www.linkedin.com/in/erika-miglietta/"
         className="socials__link"
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn profile"
       >
-        <i className="fa-brands fa-linkedin"></i>
+        <i className="fa-brands fa-linkedin" aria-hidden="true"></i>
       </a>
     </div>
   );

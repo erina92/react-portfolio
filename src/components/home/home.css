@@ -195,3 +195,50 @@
     font-size: 1.5rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .home__img {
+    width: 60%;
+  }
+
+  .home__socials {
+    column-gap: 3rem;
+  }
+
+  .intro {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home__img {
+    width: 75%;
+  }
+
+  .home__name {
+    font-size: 1.5rem;
+  }
+
+  .home__socials {
+    column-gap: 2rem;
+  }
+
+  .socials__link {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .home__img {
+    width: 85%;
+  }
+
+  .home__name {
+    font-size: 1.25rem;
+  }
+
+  .home__socials {
+    column-gap: 1.5rem;
+  }
+}

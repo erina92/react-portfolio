@@ -1,20 +1,21 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import LanguageProvider from "./components/language/LanguageProvider";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
-import Music from "./components/music/Music";
-import Games from "./components/games/games";
-import Services from "./components/services/Services";
-import Resume from "./components/resume/Resume";
-import Portfolio from "./components/portfolio/Portfolio";
-import Skills from "./components/skills/Skills";
-import Contact from "./components/contact/Contact";
-import DarkMode from "./DarkMode";
+import useDarkMode from "./DarkMode";
+
+const Music = lazy(() => import("./components/music/Music"));
+const Games = lazy(() => import("./components/games/Games"));
+const Skills = lazy(() => import("./components/skills/Skills"));
+const Services = lazy(() => import("./components/services/Services"));
+const Resume = lazy(() => import("./components/resume/Resume"));
+const Portfolio = lazy(() => import("./components/portfolio/Portfolio"));
+const Contact = lazy(() => import("./components/contact/Contact"));
 
 function App() {
-  const [darkMode, toggleDarkMode] = DarkMode();
+  const [darkMode, toggleDarkMode] = useDarkMode();
 
   return (
     <LanguageProvider>
@@ -23,13 +24,15 @@ function App() {
         <main className="main">
           <Home />
           <About />
-          <Music />
-          <Games />
-          <Skills />
-          <Services />
-          <Resume />
-          <Portfolio />
-          <Contact />
+          <Suspense fallback={<div className="section-loading"></div>}>
+            <Music />
+            <Games />
+            <Skills />
+            <Services />
+            <Resume />
+            <Portfolio />
+            <Contact />
+          </Suspense>
         </main>
       </div>
     </LanguageProvider>
