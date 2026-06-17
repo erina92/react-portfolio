@@ -61,9 +61,12 @@
   object-fit: contain;
 }
 
-.services__container.services__cloud .services__card:nth-child(5) .services__img,
-.services__container.services__cloud .services__card:nth-child(6) .services__img {
+.services__container.services__cloud .services__card:nth-child(5) .services__img {
   mix-blend-mode: multiply;
+}
+
+.services__container.services__cloud .services__card:nth-child(6) .services__img {
+  mix-blend-mode: darken;
 }
 
 .services__container.services__cloud .services__card:nth-child(6) .services__img {
