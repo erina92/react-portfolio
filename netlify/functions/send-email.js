@@ -53,7 +53,7 @@ exports.handler = async function (event, context) {
 
           <!-- HEADER -->
           <tr>
-            <td class="email-header" bgcolor="#a855b5" style="background:#a855b5;padding:32px 24px;text-align:center;">
+            <td class="email-header" bgcolor="#a855b5" style="background:#a855b5;padding:32px 24px;text-align:center;border-radius:16px 16px 0 0;">
               <p style="margin:0 0 6px;font-size:12px;color:rgba(255,255,255,0.8);letter-spacing:3px;text-transform:uppercase;">Portfolio</p>
               <h1 style="margin:0;font-size:24px;color:#ffffff;font-weight:700;">Nuovo messaggio ricevuto</h1>
               <p style="margin:10px 0 0;font-size:13px;color:rgba(255,255,255,0.85);">Qualcuno ha compilato il tuo form di contatto</p>
@@ -115,7 +115,7 @@ exports.handler = async function (event, context) {
 
           <!-- FOOTER -->
           <tr>
-            <td class="email-footer" bgcolor="#f0ebfb" style="background:#f0ebfb;padding:20px 24px;text-align:center;border-top:1px solid #e8e0f5;">
+            <td class="email-footer" bgcolor="#f0ebfb" style="background:#f0ebfb;padding:20px 24px;text-align:center;border-top:1px solid #e8e0f5;border-radius:0 0 16px 16px;">
               <p style="margin:0;font-size:12px;color:#999;line-height:1.6;">
                 Generata automaticamente dal form di contatto di<br/>
                 <strong style="color:#cb70aa;">erikamiglietta.netlify.app</strong>
