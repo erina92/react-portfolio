@@ -1,9 +1,15 @@
 .music__container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
-  max-width: 700px;
+  max-width: 960px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .music__container {
+    grid-template-columns: 1fr;
+  }
 }
 
 .music__filters {
