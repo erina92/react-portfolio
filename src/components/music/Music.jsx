@@ -41,7 +41,7 @@ const Music = () => {
             title={`Spotify track ${id}`}
             src={`https://open.spotify.com/embed/track/${id}?utm_source=generator`}
             width="100%"
-            height="100"
+            height="152"
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
             className="embed__content"
