@@ -1,6 +1,6 @@
-// Netlify Function to send emails via SendGrid
+// Netlify Function to send emails via Resend
 // Requires these environment variables set in Netlify UI:
-// SENDGRID_API_KEY, TO_EMAIL, FROM_EMAIL (optional)
+// RESEND_API_KEY, TO_EMAIL
 
 exports.handler = async function (event, context) {
   try {
@@ -14,14 +14,13 @@ exports.handler = async function (event, context) {
     const subject = data.subject || 'Contact form message';
     const message = data.message || '';
 
-    const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
     const TO_EMAIL = process.env.TO_EMAIL;
-    const FROM_EMAIL = process.env.FROM_EMAIL || 'no-reply@portfolio';
 
-    if (!SENDGRID_API_KEY || !TO_EMAIL) {
+    if (!RESEND_API_KEY || !TO_EMAIL) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'SendGrid API key or TO_EMAIL not configured in environment' }),
+        body: JSON.stringify({ error: 'RESEND_API_KEY or TO_EMAIL not configured in environment' }),
       };
     }
 
@@ -129,21 +128,17 @@ exports.handler = async function (event, context) {
 </html>`;
 
     const payload = {
-      personalizations: [
-        {
-          to: [{ email: TO_EMAIL }],
-          subject: `Portfolio contact — ${subject}`,
-        },
-      ],
-      from: { email: FROM_EMAIL, name: 'Portfolio Contact' },
-      reply_to: { email },
-      content: [{ type: 'text/html', value: html }],
+      from: 'Portfolio Contact <onboarding@resend.dev>',
+      to: [TO_EMAIL],
+      subject: `Portfolio contact — ${subject}`,
+      html,
+      reply_to: email,
     };
 
-    const resp = await fetch('https://api.sendgrid.com/v3/mail/send', {
+    const resp = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${SENDGRID_API_KEY}`,
+        Authorization: `Bearer ${RESEND_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
