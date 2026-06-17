@@ -35,10 +35,20 @@
   box-shadow: 0px 5px 20px 0px rgba(156, 207, 216, 0.7);
 }
 
-/* Ensure the 4th card in the cloud container matches the first cloud card color */
+/* Ensure the cloud cards continue the purple → orange → teal cycle */
 .services__container.services__cloud .services__card:nth-child(4) {
   background-color: rgba(196, 167, 231);
   box-shadow: 0px 5px 20px 0px rgba(196, 167, 231, 0.7);
+}
+
+.services__container.services__cloud .services__card:nth-child(5) {
+  background-color: rgba(246, 193, 119);
+  box-shadow: 0px 5px 20px 0px rgba(246, 193, 119, 0.7);
+}
+
+.services__container.services__cloud .services__card:nth-child(6) {
+  background-color: rgba(156, 207, 216);
+  box-shadow: 0px 5px 20px 0px rgba(156, 207, 216, 0.7);
 }
 
 .services__img {

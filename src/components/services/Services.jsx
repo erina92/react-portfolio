@@ -8,8 +8,8 @@ import GoogleCloud from "../../assets/google-cloud.svg";
 import OracleCloud from "../../assets/oracle-cloud.svg";
 import AzureCloud from "../../assets/azure-cloud.svg";
 import AlibabaCloud from "../../assets/alibaba-cloud.svg";
-import CommvaultLogo from "../../assets/commvault-badges/commvault.png";
-import NetAppLogo from "../../assets/credly-badges/netapp_ontap_associate.png";
+import CommvaultLogo from "../../assets/commvault-logo.png";
+import NetAppLogo from "../../assets/netapp-ontap-logo.png";
 
 const Services = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
