@@ -24,16 +24,16 @@ function App() {
       <div className={darkMode ? "dark-mode" : ""}>
         <Sidebar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         <main className="main">
-          <Home />
-          <About />
-          <Suspense fallback={<div className="section-loading"></div>}>
-            <Music />
-            <Games />
-            <Skills />
-            <Services />
-            <Resume />
-            <Portfolio />
-            <Contact />
+          <div className="slide"><Home /></div>
+          <div className="slide"><About /></div>
+          <Suspense fallback={<div className="slide section-loading"></div>}>
+            <div className="slide"><Music /></div>
+            <div className="slide"><Games /></div>
+            <div className="slide"><Skills /></div>
+            <div className="slide"><Services /></div>
+            <div className="slide"><Resume /></div>
+            <div className="slide"><Portfolio /></div>
+            <div className="slide"><Contact /></div>
           </Suspense>
         </main>
       </div>

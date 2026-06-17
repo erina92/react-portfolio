@@ -24,7 +24,8 @@ const ScrollDots = () => {
     const main = document.querySelector('.main');
     const target = document.getElementById(id);
     if (main && target) {
-      main.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
+      const slide = target.closest('.slide') || target;
+      main.scrollTo({ left: slide.offsetLeft, behavior: 'smooth' });
     }
   };
 

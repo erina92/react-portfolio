@@ -14,7 +14,7 @@
   display: none;
 }
 
-.main > section {
+.slide {
   min-width: calc(100vw - 110px);
   width: calc(100vw - 110px);
   height: 100vh;
@@ -23,6 +23,9 @@
   scroll-snap-align: start;
   flex-shrink: 0;
   scrollbar-width: thin;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 /* ── Mobile: revert to vertical ── */
@@ -36,11 +39,12 @@
     height: auto;
   }
 
-  .main > section {
+  .slide {
     min-width: 100%;
     width: 100%;
     height: auto;
     overflow-y: visible;
     scroll-snap-align: none;
+    display: block;
   }
 }
