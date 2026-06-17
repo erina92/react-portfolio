@@ -8,6 +8,8 @@ import GoogleCloud from "../../assets/google-cloud.svg";
 import OracleCloud from "../../assets/oracle-cloud.svg";
 import AzureCloud from "../../assets/azure-cloud.svg";
 import AlibabaCloud from "../../assets/alibaba-cloud.svg";
+import CommvaultLogo from "../../assets/commvault-badges/commvault.png";
+import NetAppLogo from "../../assets/credly-badges/netapp_ontap_associate.png";
 
 const Services = () => {
   const { isItalian, isFrench } = useContext(LanguageContext);
@@ -115,6 +117,26 @@ const Services = () => {
               : isFrench
               ? "Migrations et configurations pour des scénarios APAC, automatisation et optimisation des ressources sur Alibaba Cloud."
               : "Migrations and configurations for APAC scenarios, automation and resource optimization on Alibaba Cloud.",
+          },
+          {
+            id: "commvault",
+            image: CommvaultLogo,
+            title: "Commvault",
+            description: isItalian
+              ? "Gestione e protezione dei dati aziendali con Commvault: backup, recovery e governance dei dati."
+              : isFrench
+              ? "Gestion et protection des données d'entreprise avec Commvault : sauvegarde, récupération et gouvernance des données."
+              : "Enterprise data management and protection with Commvault: backup, recovery and data governance.",
+          },
+          {
+            id: "netapp",
+            image: NetAppLogo,
+            title: "NetApp ONTAP",
+            description: isItalian
+              ? "Gestione dello storage enterprise con NetApp ONTAP: provisioning, replica dei dati e ottimizzazione delle performance."
+              : isFrench
+              ? "Gestion du stockage d'entreprise avec NetApp ONTAP : provisionnement, réplication des données et optimisation des performances."
+              : "Enterprise storage management with NetApp ONTAP: provisioning, data replication and performance optimization.",
           },
         ].map(({ id, image, title, description }) => (
           <div className="services__card" key={id}>
