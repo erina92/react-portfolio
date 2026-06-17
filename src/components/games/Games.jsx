@@ -114,7 +114,7 @@ const Games = () => {
         id: 15,
         image: Cairn,
         title: "Cairn",
-        url: "#",
+        url: "https://www.playstation.com/it-it/games/cairn/",
       },
     ],
     []
