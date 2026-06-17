@@ -1,6 +1,8 @@
-// Netlify Function to send emails via Resend
+// Netlify Function to send emails via Gmail SMTP (nodemailer)
 // Requires these environment variables set in Netlify UI:
-// RESEND_API_KEY, TO_EMAIL
+// GMAIL_USER, GMAIL_APP_PASSWORD, TO_EMAIL
+
+const nodemailer = require('nodemailer');
 
 exports.handler = async function (event, context) {
   try {
@@ -14,13 +16,14 @@ exports.handler = async function (event, context) {
     const subject = data.subject || 'Contact form message';
     const message = data.message || '';
 
-    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    const GMAIL_USER = process.env.GMAIL_USER;
+    const GMAIL_APP_PASSWORD = process.env.GMAIL_APP_PASSWORD;
     const TO_EMAIL = process.env.TO_EMAIL;
 
-    if (!RESEND_API_KEY || !TO_EMAIL) {
+    if (!GMAIL_USER || !GMAIL_APP_PASSWORD || !TO_EMAIL) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'RESEND_API_KEY or TO_EMAIL not configured in environment' }),
+        body: JSON.stringify({ error: 'GMAIL_USER, GMAIL_APP_PASSWORD or TO_EMAIL not configured in environment' }),
       };
     }
 
@@ -127,27 +130,21 @@ exports.handler = async function (event, context) {
 </body>
 </html>`;
 
-    const payload = {
-      from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: [TO_EMAIL],
-      subject: `Portfolio contact — ${subject}`,
-      html,
-      reply_to: email,
-    };
-
-    const resp = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: GMAIL_USER,
+        pass: GMAIL_APP_PASSWORD,
       },
-      body: JSON.stringify(payload),
     });
 
-    if (!resp.ok) {
-      const text = await resp.text();
-      return { statusCode: resp.status, body: JSON.stringify({ error: text }) };
-    }
+    await transporter.sendMail({
+      from: `"Portfolio Contact" <${GMAIL_USER}>`,
+      to: TO_EMAIL,
+      replyTo: email,
+      subject: `Portfolio contact — ${subject}`,
+      html,
+    });
 
     return { statusCode: 200, body: JSON.stringify({ message: 'Email sent' }) };
   } catch (err) {
