@@ -52,6 +52,25 @@
   resize: none;
 }
 
+.contact__whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #25D366;
+  font-weight: var(--font-bold);
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+.contact__whatsapp:hover {
+  opacity: 0.8;
+}
+
+.contact__whatsapp .fa-whatsapp {
+  font-size: 1.4rem;
+}
+
 .message__sent {
   margin-top: 1rem;
   text-align: center;

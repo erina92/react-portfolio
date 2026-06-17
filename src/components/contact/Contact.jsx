@@ -10,9 +10,7 @@ const Contact = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     setMessage("Sending...");
-    // Send via Web3Forms (client-side). This uses the access key you provided.
-    // Web3Forms endpoint: https://api.web3forms.com/submit
-    const WEB3FORMS_KEY = "5629a6c2-2130-4ea7-8a8d-2559859daab1";
+    const WEB3FORMS_KEY = process.env.REACT_APP_WEB3FORMS_KEY;
 
     // Collect form values
     const fd = new FormData(e.target);
@@ -82,6 +80,19 @@ const Contact = () => {
               ? "Écrivez-moi via ce formulaire et je recevrai un e-mail!"
               : "Send me an email through this form 👋"}
           </p>
+          <a
+            href="https://wa.me/393473334037?text=Ciao%20Erika!"
+            className="contact__whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            {isItalian
+              ? " Scrivimi su WhatsApp"
+              : isFrench
+              ? " Écrivez-moi sur WhatsApp"
+              : " Message me on WhatsApp"}
+          </a>
         </div>
 
         <form className="contact__form" ref={form} onSubmit={sendEmail}>

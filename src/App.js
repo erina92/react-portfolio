@@ -5,6 +5,7 @@ import LanguageProvider from "./components/language/LanguageProvider";
 import Home from "./components/home/Home";
 import About from "./components/about/About";
 import useDarkMode from "./DarkMode";
+import WhatsAppButton from "./components/whatsapp/WhatsAppButton";
 
 const Music = lazy(() => import("./components/music/Music"));
 const Games = lazy(() => import("./components/games/Games"));
@@ -35,6 +36,7 @@ function App() {
           </Suspense>
         </main>
       </div>
+      <WhatsAppButton />
     </LanguageProvider>
   );
 }
