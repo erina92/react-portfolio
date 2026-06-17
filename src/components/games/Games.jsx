@@ -11,6 +11,10 @@ import Wukong from "../../assets/games/black-myth.jpg"; // Black Myth: Wukong
 import FFVIIR from "../../assets/games/final-fantasy-seven-rebirth.jpg"; // FINAL FANTASY VII REBIRTH
 import RDR2 from "../../assets/games/red-dead-two.jpeg"; // Red Dead Redemption 2
 import SpiderMan2 from "../../assets/games/spider-man-two.jpg"; // Marvel's Spider-Man 2
+import Mixtape from "../../assets/games/mixtape.jpg";
+import FirstLight from "../../assets/games/007-first-light.jpg";
+import Pragmata from "../../assets/games/pragmata.jpg";
+import Cairn from "../../assets/games/cairn.jpg";
 import "./games.css";
 import LanguageContext from "../language/LanguageContext";
 
@@ -87,6 +91,30 @@ const Games = () => {
         image: SpiderMan2,
         title: "Marvel's Spider-Man 2",
         url: "https://www.playstation.com/en-us/games/marvels-spider-man-2/",
+      },
+      {
+        id: 12,
+        image: Mixtape,
+        title: "Mixtape",
+        url: "https://www.playstation.com/en-us/games/mixtape/",
+      },
+      {
+        id: 13,
+        image: FirstLight,
+        title: "007 First Light",
+        url: "https://www.007firstlight.com/",
+      },
+      {
+        id: 14,
+        image: Pragmata,
+        title: "Pragmata",
+        url: "https://www.capcom.com/us/titles/pragmata.html",
+      },
+      {
+        id: 15,
+        image: Cairn,
+        title: "Cairn",
+        url: "https://store.steampowered.com/app/1582430/Cairn/",
       },
     ],
     []

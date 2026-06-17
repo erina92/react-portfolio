@@ -11,6 +11,9 @@ import AlibabaSlb from "../assets/alibaba-cloud-badges/slb.png";
 import AlibabaTerraform from "../assets/alibaba-cloud-badges/terraform.png";
 import CommvaultBadge1 from "../assets/commvault-badges/commcell.png";
 import CommvaultBadge2 from "../assets/commvault-badges/commvault.png";
+import NetAppBadge from "../assets/credly-badges/netapp_ontap_associate.png";
+import GcpLoadBalancingBadge from "../assets/credly-badges/gcp-load-balancing.png";
+import GcpAppDevBadge from "../assets/credly-badges/gcp-app-dev.png";
 import AlibabaAutoscalingCert from "../assets/alibaba-cloud-cert/autoscaling-cert.png";
 import AlibabaEcsCert from "../assets/alibaba-cloud-cert/ecs-cert.png";
 import AlibabaOssCert from "../assets/alibaba-cloud-cert/oss-cert.png";
@@ -112,6 +115,27 @@ export const badgesData = [
     title: "Commvault Professional",
     category: "Commvault Badge",
     url: "https://www.credly.com/badges/3fb81ca6-e2ac-4fdc-a5c7-7d3281d88c05/public_url",
+  },
+  {
+    id: 9,
+    image: NetAppBadge,
+    title: "NetApp Accredited Cloud Native Associate",
+    category: "NetApp Badge",
+    url: "https://www.credly.com/badges/78b4b06c-30b9-4182-9128-3ac3b53c0866/public_url",
+  },
+  {
+    id: 10,
+    image: GcpLoadBalancingBadge,
+    title: "Implement Load Balancing on Compute Engine",
+    category: "Google Cloud Badge",
+    url: "https://www.credly.com/badges/b7624a0e-ce02-4e61-a36f-e8a01362b7e7/public_url",
+  },
+  {
+    id: 11,
+    image: GcpAppDevBadge,
+    title: "Set Up an App Dev Environment on Google Cloud",
+    category: "Google Cloud Badge",
+    url: "https://www.credly.com/badges/bbe3805c-bd96-4c8e-be7e-97680fb0c91f/public_url",
   },
 ];
 

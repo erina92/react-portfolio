@@ -116,6 +116,51 @@ const Music = () => {
             ></iframe>
           </header>
         </div>
+        <div className="music__card">
+          <header className="music-card__header">
+            <iframe
+              title="Embedded Content"
+              style={{ borderRadius: "12px", border: "0px" }}
+              src="https://open.spotify.com/embed/track/3sK8wGT43QFpWrvNQsrQya?utm_source=generator"
+              width="300"
+              height="300"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              className="embed__content"
+            ></iframe>
+          </header>
+        </div>
+        <div className="music__card">
+          <header className="music-card__header">
+            <iframe
+              title="Embedded Content"
+              style={{ borderRadius: "12px", border: "0px" }}
+              src="https://open.spotify.com/embed/track/0LTSNmOLBt25GMjHlxp9OR?utm_source=generator"
+              width="300"
+              height="300"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              className="embed__content"
+            ></iframe>
+          </header>
+        </div>
+        <div className="music__card">
+          <header className="music-card__header">
+            <iframe
+              title="Embedded Content"
+              style={{ borderRadius: "12px", border: "0px" }}
+              src="https://open.spotify.com/embed/track/2vIJ2wlcjywHXjyJSiDhuH?utm_source=generator"
+              width="300"
+              height="300"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              className="embed__content"
+            ></iframe>
+          </header>
+        </div>
       </div>
     </section>
   );
