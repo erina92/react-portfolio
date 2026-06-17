@@ -190,22 +190,26 @@ const Games = () => {
                 ) : trophies ? (
                   <div className="games__trophies">
                     <div className="trophy__item">
-                      <span className="trophy__icon platinum">🏆</span>
+                      <span className="trophy__icon">🏆</span>
                       <span className="trophy__count">{trophies.platinum}</span>
                     </div>
+                    <span className="trophy__divider"></span>
                     <div className="trophy__item">
-                      <span className="trophy__icon gold">🥇</span>
+                      <span className="trophy__icon">🥇</span>
                       <span className="trophy__count">{trophies.gold}</span>
                     </div>
+                    <span className="trophy__divider"></span>
                     <div className="trophy__item">
-                      <span className="trophy__icon silver">🥈</span>
+                      <span className="trophy__icon">🥈</span>
                       <span className="trophy__count">{trophies.silver}</span>
                     </div>
+                    <span className="trophy__divider"></span>
                     <div className="trophy__item">
-                      <span className="trophy__icon bronze">🥉</span>
+                      <span className="trophy__icon">🥉</span>
                       <span className="trophy__count">{trophies.bronze}</span>
                     </div>
-                    <div className="trophy__progress">{trophies.progress}%</div>
+                    <span className="trophy__divider"></span>
+                    <span className="trophy__progress">{trophies.progress}%</span>
                   </div>
                 ) : (
                   <div className="games__trophies">
