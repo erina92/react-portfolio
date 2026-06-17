@@ -45,10 +45,15 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const npsso =
-      process.env.PSN_NPSSO ||
-      "tSgXF7F8pw5k4JIRgtN2B6ZsYZcmHCHdwaDY0LTEXlvmRvXisHd1uytSmw0GzTBG";
-    const accountId = process.env.PSN_ACCOUNT_ID; // We'll resolve this on first call
+    const npsso = process.env.PSN_NPSSO;
+    if (!npsso) {
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ error: "PSN_NPSSO environment variable not set" }),
+      };
+    }
+    const accountId = process.env.PSN_ACCOUNT_ID;
 
     // Get game title from query params
     const gameTitle = event.queryStringParameters?.title;
