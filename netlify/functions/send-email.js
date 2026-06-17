@@ -51,10 +51,10 @@ exports.handler = async function (event, context) {
 
           <!-- HEADER -->
           <tr>
-            <td class="email-header" style="background:linear-gradient(135deg,#cb70aa 0%,#a855b5 50%,#7c3aed 100%);padding:40px 40px 32px;text-align:center;">
-              <p style="margin:0 0 8px;font-size:13px;color:rgba(255,255,255,0.75);letter-spacing:3px;text-transform:uppercase;">Portfolio</p>
-              <h1 style="margin:0;font-size:28px;color:#ffffff;font-weight:700;letter-spacing:-0.5px;">Nuovo messaggio ricevuto</h1>
-              <p style="margin:12px 0 0;font-size:14px;color:rgba(255,255,255,0.8);">Qualcuno ha compilato il tuo form di contatto &#x2709;&#xFE0F;</p>
+            <td class="email-header" bgcolor="#a855b5" style="background:#a855b5;padding:32px 24px;text-align:center;">
+              <p style="margin:0 0 6px;font-size:12px;color:rgba(255,255,255,0.8);letter-spacing:3px;text-transform:uppercase;">Portfolio</p>
+              <h1 style="margin:0;font-size:24px;color:#ffffff;font-weight:700;">Nuovo messaggio ricevuto</h1>
+              <p style="margin:10px 0 0;font-size:13px;color:rgba(255,255,255,0.85);">Qualcuno ha compilato il tuo form di contatto</p>
             </td>
           </tr>
 
@@ -113,9 +113,9 @@ exports.handler = async function (event, context) {
 
           <!-- FOOTER -->
           <tr>
-            <td class="email-footer" style="background:#f0ebfb;padding:24px 40px;text-align:center;border-top:1px solid #e8e0f5;">
+            <td class="email-footer" bgcolor="#f0ebfb" style="background:#f0ebfb;padding:20px 24px;text-align:center;border-top:1px solid #e8e0f5;">
               <p style="margin:0;font-size:12px;color:#999;line-height:1.6;">
-                Questa email è stata generata automaticamente dal form di contatto di<br/>
+                Generata automaticamente dal form di contatto di<br/>
                 <strong style="color:#cb70aa;">erikamiglietta.netlify.app</strong>
               </p>
             </td>
